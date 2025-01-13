@@ -1468,10 +1468,28 @@
                                         <h5 class="post-details">Our Newsletter</h5>
                                         <hr>
                                         <p class="blog-paragraph">Follow our newsletter to stay updated about us.</p>
-                                        <div class="form">
-                                            <input type="text" placeholder="Enter Your Email Address">
-                                            <a href="#" class="shop-btn">Subscribe</a>
-                                        </div>
+                                        <form action="{{ route('newsletter.store') }}" method="POST" class="form">
+    @csrf
+    
+    <div class="form-group">
+        <input 
+            type="email" 
+            name="email" 
+            class="form-control @error('email') is-invalid @enderror" 
+            placeholder="Enter Your Email Address" 
+            value=""
+            required>
+            
+        @error('email')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+        @enderror
+    </div>
+    
+    <button type="submit" class="shop-btn">Subscribe</button>
+</form>
+
                                     </div>
                                 </div>
                             </div>
