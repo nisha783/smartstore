@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogPost;
 use Illuminate\Http\Request;
 
 class BlogPostController extends Controller
@@ -12,7 +13,8 @@ class BlogPostController extends Controller
     public function index()
     {
         //
-        return view('blog.index');
+        $blogPosts=BlogPost::latest()->paginate(8);
+        return view('blog.index',compact('blogPosts'));
     }
 
     /**
@@ -34,9 +36,11 @@ class BlogPostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($slug)
     {
         //
+        $blogPost = BlogPost::where('slug', $slug)->first();
+        return view('blog.show',compact('blogPost'));
     }
 
     /**
