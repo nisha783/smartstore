@@ -1011,7 +1011,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="blogs.html">
+                                <a href="{{route('blog.index')}}">
                                     <span class="list-text">Blog</span>
                                 </a>
                                 <ul class="header-sub-menu">
@@ -1019,7 +1019,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="user-profile.html">
+                                <a href="{{route('user.dashboard.index')}}">
                                     <span class="list-text">User Dashboard</span>
                                 </a>
                             </li>
