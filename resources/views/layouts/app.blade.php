@@ -1024,7 +1024,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="contact-us.html">
+                                <a href="{{route('contact.index')}}">
                                     <span class="list-text">Contact</span>
                                 </a>
                             </li>
