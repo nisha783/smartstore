@@ -10,6 +10,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -18,54 +19,106 @@ class ProductResource extends Resource
     protected static ?string $model = Product::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    
     public static function form(Form $form): Form
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('mini_description')
-                    ->columnSpanFull(),
-                Forms\Components\Textarea::make('description')
-                    ->required()
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('price')
-                    ->required()
-                    ->numeric()
-                    ->prefix('$'),
-                Forms\Components\TextInput::make('sale_price')
-                    ->numeric(),
-                Forms\Components\TextInput::make('sku')
-                    ->label('SKU')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('stock')
-                    ->required()
-                    ->numeric()
-                    ->default(0),
-                Forms\Components\Toggle::make('featured')
-                    ->required(),
-                Forms\Components\TextInput::make('status')
-                    ->required()
-                    ->maxLength(255)
-                    ->default('draft'),
-                Forms\Components\TextInput::make('meta_title')
-                    ->maxLength(255),
-                Forms\Components\Textarea::make('meta_description')
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('weight')
-                    ->numeric(),
-                Forms\Components\TextInput::make('dimensions'),
-                Forms\Components\TextInput::make('tax_class')
-                    ->required()
-                    ->maxLength(255)
-                    ->default('standard'),
-            ]);
+        return $form->schema([
+            Forms\Components\Tabs::make('Product')
+                ->tabs([
+                    Forms\Components\Tabs\Tab::make('Basic Information')
+                        ->schema([
+                            Forms\Components\TextInput::make('name')
+                                ->required()
+                                // after blur this input
+                                ->live(onBlur: true)
+                                ->afterStateUpdated(fn($state, callable $set) => $set('slug', Str::slug($state))),
+                            Forms\Components\TextInput::make('slug')
+                                ->required()
+                                ->unique(ignorable: fn($record) => $record),
+                            Forms\Components\TextInput::make('sku')
+                                ->required()
+                                ->unique(ignorable: fn($record) => $record),
+                            Forms\Components\RichEditor::make('description')
+                                ->required()
+                                ->columnSpan('full'),
+
+                            Forms\Components\RichEditor::make('mini_description')
+                                ->required()
+                                ->columnSpan('full'),
+                            Forms\Components\Select::make('status')
+                                ->options([
+                                    'draft' => 'Draft',
+                                    'published' => 'Published',
+                                    'archived' => 'Archived',
+                                ])
+                                ->default('draft')
+                                ->required(),
+                        ])->columns(2),
+
+                    Forms\Components\Tabs\Tab::make('Pricing & Inventory')
+                        ->schema([
+                            Forms\Components\TextInput::make('price')
+                                ->numeric()
+                                ->required()
+                                ->prefix('$'),
+                            Forms\Components\TextInput::make('sale_price')
+                                ->numeric()
+                                ->prefix('$'),
+                            Forms\Components\TextInput::make('stock')
+                                ->numeric()
+                                ->default(0)
+                                ->required(),
+                            Forms\Components\Select::make('tax_class')
+                                ->options([
+                                    'standard' => 'Standard',
+                                    'reduced' => 'Reduced',
+                                    'zero' => 'Zero',
+                                ])
+                                ->default('standard')
+                                ->required(),
+                        ])->columns(2),
+
+                    Forms\Components\Tabs\Tab::make('Media')
+                        ->schema([
+                            Forms\Components\FileUpload::make('product_images')
+                                ->image()
+                                ->multiple()
+                                ->directory('products')
+                                ->enableReordering()
+                                ->maxFiles(5)
+                                ->columnSpan('full')
+                                ->saveRelationshipsUsing(function ($component, $state, $record) {
+
+                                    foreach ($state as $filePath) {
+                                        info($filePath);
+                                        $record->images()->create([
+                                            'product_id' => $record->id,
+                                            'image' => $filePath,
+                                            'is_default' => false
+                                        ]);
+                                    }
+                                }),
+                        ]),
+
+                    Forms\Components\Tabs\Tab::make('Categories & Features')
+                        ->schema([
+                            Forms\Components\Select::make('categories')
+                                ->multiple()
+                                ->relationship('categories', 'name')
+                                ->preload()
+                                ->required(),
+                            Forms\Components\Toggle::make('featured')
+                                ->default(false),
+                        ]),
+
+                    Forms\Components\Tabs\Tab::make('SEO')
+                        ->schema([
+                            Forms\Components\TextInput::make('meta_title'),
+                            Forms\Components\Textarea::make('meta_description')
+                                ->rows(3),
+                        ]),
+                ]),
+        ]);
     }
 
     public static function table(Table $table): Table
@@ -107,11 +160,16 @@ class ProductResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('deleted_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

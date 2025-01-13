@@ -29,6 +29,8 @@ return new class extends Migration
             $table->json('dimensions')->nullable();
             $table->string('tax_class')->default('standard');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
