@@ -1001,12 +1001,12 @@
                     <div class="header-nav-menu">
                         <ul class="menu-list">
                             <li>
-                                <a href="index.html">
+                                <a href="{{url('/')}}">
                                     <span class="list-text">Home</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="about.html">
+                                <a href="{{route('about.index')}}">
                                     <span class="list-text">About</span>
                                 </a>
                             </li>
