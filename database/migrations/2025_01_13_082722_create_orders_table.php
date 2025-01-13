@@ -24,7 +24,7 @@ return new class extends Migration
             $table->decimal('shipping_cost', 8, 2);
             $table->decimal('tax', 8, 2);
             $table->decimal('discount', 8, 2)->default(0);
-            $table->text('notes')->nullable();
+            $table->text('notes')->nullable();  
             $table->timestamps();
         });
     }
