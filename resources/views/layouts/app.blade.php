@@ -12,25 +12,22 @@
 
     <!--title  -->
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}">
 
+ <!--------------- swiper-css ---------------->
+<link rel="stylesheet" href="{{ asset('css/swiper10-bundle.min.css') }}">
 
-    <!--------------- swiper-css ---------------->
-    <link rel="stylesheet" href="./css/swiper10-bundle.min.css">
+<!--------------- bootstrap-css ---------------->
+<link rel="stylesheet" href="{{ asset('css/bootstrap-5.3.2.min.css') }}">
 
-    <!--------------- bootstrap-css ---------------->
-    <link rel="stylesheet" href="./css/bootstrap-5.3.2.min.css">
+<!---------------------- Range Slider ------------------->
+<link rel="stylesheet" href="{{ asset('css/nouislider.min.css') }}">
 
-    <!---------------------- Range Slider ------------------->
-    <link rel="stylesheet" href="css/nouislider.min.css">
+<!---------------------- Scroll ------------------->
+<link rel="stylesheet" href="{{ asset('css/aos-3.0.0.css') }}">
 
-    <!---------------------- Scroll ------------------->
-    <link rel="stylesheet" href="css/aos-3.0.0.css">
+<!--------------- additional-css ---------------->
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
-    <!--------------- additional-css ---------------->
-    <link rel="stylesheet" href="./css/style.css">
 
 
 
