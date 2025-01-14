@@ -2694,7 +2694,7 @@
                             <div class="footer-link useful-link">
                                 <ul>
                                     <li><a href="about.html">Secure Payment</a></li>
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
+                                    <li><a href="{{route('privacy.index')}}">Privacy Policy</a></li>
                                     <li><a href="terms.html">Terms of Use</a></li>
                                     <li><a href="product-sidebar.html">Archived Products</a></li>
                                 </ul>
