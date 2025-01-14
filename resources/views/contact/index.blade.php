@@ -1245,35 +1245,68 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="question-section login-section ">
-                            <div class="review-form">
-                                <h5 class="comment-title">Get In Touch</h5>
-                                <div class=" account-inner-form">
-                                    <div class="review-form-name">
-                                        <label for="fname" class="form-label">Name*</label>
-                                        <input type="text" id="fname" class="form-control" placeholder="Name">
-                                    </div>
-                                    <div class="review-form-name">
-                                        <label for="email" class="form-label">Email*</label>
-                                        <input type="email" id="email" class="form-control"
-                                            placeholder="user@gmail.com">
-                                    </div>
-                                    <div class="review-form-name">
-                                        <label for="subject" class="form-label">Subject*</label>
-                                        <input type="text" id="subject" class="form-control" placeholder="Subject">
-                                    </div>
-                                </div>
-                                <div class="review-textarea">
-                                    <label for="floatingTextarea">Massage*</label>
-                                    <textarea class="form-control" placeholder="Write Massage..........."
-                                        id="floatingTextarea" rows="3"></textarea>
-                                </div>
-                                <div class="login-btn">
-                                    <a href="#" class="shop-btn">Send Now</a>
-                                </div>
-                            </div>
-                        </div>
+    <div class="question-section login-section">
+        <div class="review-form">
+            <h5 class="comment-title">Get In Touch</h5>
+
+            <!-- Form Start -->
+            <form action="{{ route('contact.store') }}" method="POST">
+                @csrf
+                <div class="account-inner-form">
+                    <!-- Name -->
+                    <div class="review-form-name">
+                        <label for="name" class="form-label">Name*</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}" required>
+                        @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
+
+                    <!-- Email -->
+                    <div class="review-form-name">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="user@gmail.com" value="{{ old('email') }}" required>
+                        @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="review-form-name">
+                        <label for="subject" class="form-label">Subject*</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}" required>
+                        @error('subject')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="review-textarea">
+                    <label for="message" class="form-label">Message*</label>
+                    <textarea class="form-control" placeholder="Write Message..." id="message" name="message" rows="3" required>{{ old('message') }}</textarea>
+                    @error('message')
+                    <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <!-- Submit Button -->
+                <div class="login-btn mt-3">
+                    <button type="submit" class="shop-btn">Send Now</button>
+                </div>
+
+                <!-- Success Message -->
+                @if (session('success'))
+                <div class="text-success mt-3">
+                    {{ session('success') }}
+                </div>
+                @endif
+            </form>
+            <!-- Form End -->
+        </div>
+    </div>
+</div>
+
                 </div>
             </div>
         </div>
