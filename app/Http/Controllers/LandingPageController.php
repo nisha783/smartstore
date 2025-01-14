@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,8 @@ class LandingPageController extends Controller
         //
         $categories = Category::all();
         $products = Product::all();
-        return view('landing.index', compact('categories','products'));
+        $faqs=Faq::all();
+        return view('landing.index', compact('categories','products','faqs'));
     }
 
     /**
