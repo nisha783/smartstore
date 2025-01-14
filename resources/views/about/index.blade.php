@@ -1016,9 +1016,7 @@
                                 <a href="{{route('blog.index')}}">
                                     <span class="list-text">Blog</span>
                                 </a>
-                                <ul class="header-sub-menu">
-                                    <li><a href="blogs-details.html">Blog-details</a></li>
-                                </ul>
+                              
                             </li>
                             <li>
                                 <a href="{{route('user.dashboard.index')}}">
