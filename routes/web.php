@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Auth\User\DashboardController;
 use App\Http\Controllers\BlogPostController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsLetterController;
@@ -20,9 +21,20 @@ Route::name('user.')->prefix('user')->middleware(['auth'])->group(function () {
     Route::resource('/dashboard', DashboardController::class);
 
 });
+
+
+Route::middleware(['web'])->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::post('/cart/add/{product}', [CartController::class, 'add'])->name('cart.add');
+    Route::patch('/cart/update/{product}', [CartController::class, 'update'])->name('cart.update');
+    Route::delete('/cart/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
+    Route::post('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
