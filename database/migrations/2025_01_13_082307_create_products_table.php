@@ -27,8 +27,9 @@ return new class extends Migration
             $table->text('meta_description')->nullable();
             $table->decimal('weight', 8, 2)->nullable();
             $table->json('dimensions')->nullable();
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
-            $table->string('image');
+           // $table->foreignId('category_id')->constrained()->onDelete('cascade');
+           // $table->foreignId('product_id')->constrained()->onDelete('cascade');
+           // $table->string('image');
             $table->boolean('is_default')->default(false);
             $table->string('tax_class')->default('standard');
             $table->timestamps();

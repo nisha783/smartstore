@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsLetterController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ Route::resource('/contact',ContactController::class);
 Route::resource('/about',AboutController::class);
 Route::resource('/blog',BlogPostController::class);
 Route::resource('/newsletter',NewsLetterController::class);
-
+Route::resource('/product',ProductController::class);
 
 Route::name('user.')->prefix('user')->middleware(['auth'])->group(function () {
     Route::resource('/dashboard', DashboardController::class);
