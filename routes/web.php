@@ -10,6 +10,7 @@ use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\PrivacyController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TermController;
 use Illuminate\Support\Facades\Route;
 
 Route::resource('/', LandingPageController::class);
@@ -19,6 +20,7 @@ Route::resource('/blog',BlogPostController::class);
 Route::resource('/newsletter',NewsLetterController::class);
 Route::resource('/product',ProductController::class);
 Route::resource('/privacy',PrivacyController::class);
+Route::resource('/term',TermController::class);
 
 Route::name('user.')->prefix('user')->middleware(['auth'])->group(function () {
     Route::resource('/dashboard', DashboardController::class);
