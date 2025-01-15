@@ -12,24 +12,23 @@
     <link rel="icon" href="./assets/images/homepage-one/icon.png">
 
     <!--title  -->
-    <title>Shopus | Blog</title>
+    <title>Shopus | Wishlist</title>
+
+
     
+    <link rel="stylesheet" href="{{ asset('css/swiper10-bundle.min.css') }}">
 
+<!--------------- bootstrap-css ---------------->
+<link rel="stylesheet" href="{{ asset('css/bootstrap-5.3.2.min.css') }}">
 
-    <!--------------- swiper-css ---------------->
-    <link rel="stylesheet" href="./css/swiper10-bundle.min.css">
+<!---------------------- Range Slider ------------------->
+<link rel="stylesheet" href="{{ asset('css/nouislider.min.css') }}">
 
-    <!--------------- bootstrap-css ---------------->
-    <link rel="stylesheet" href="./css/bootstrap-5.3.2.min.css">
+<!---------------------- Scroll ------------------->
+<link rel="stylesheet" href="{{ asset('css/aos-3.0.0.css') }}">
 
-    <!---------------------- Range Slider ------------------->
-    <link rel="stylesheet" href="css/nouislider.min.css">
-
-    <!---------------------- Scroll ------------------->
-    <link rel="stylesheet" href="css/aos-3.0.0.css">
-
-    <!--------------- additional-css ---------------->
-    <link rel="stylesheet" href="./css/style.css">
+<!--------------- additional-css ---------------->
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
 
@@ -1002,11 +1001,6 @@
                     <div class="header-nav-menu">
                         <ul class="menu-list">
                             <li>
-                                <a href="{{url('/')}}">
-                                    <span class="list-text">Home</span>
-                                </a>
-                            </li>
-                            <li>
                                 <a href="{{route('about.index')}}">
                                     <span class="list-text">About</span>
                                 </a>
@@ -1015,9 +1009,6 @@
                                 <a href="{{route('blog.index')}}">
                                     <span class="list-text">Blog</span>
                                 </a>
-                                <ul class="header-sub-menu">
-                                    <li><a href="blogs-details.html">Blog-details</a></li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="{{route('user.dashboard.index')}}">
@@ -1060,69 +1051,166 @@
             <div class="blog-bradcrum">
                 <span><a href="index.html">Home</a></span>
                 <span class="devider">/</span>
-                <span><a href="#">Blogs</a></span>
+                <span><a href="#">Wishlist</a></span>
             </div>
             <div class="blog-heading about-heading">
-                <h1 class="heading">Our Blogs</h1>
+                <h1 class="heading">Wishlist</h1>
             </div>
         </div>
     </section>
     <!--------------- blog-tittle-section-end---------------->
 
-    <!--------------- blog-news-section---------------->
-    <section class="latest product footer-padding">
-    <div class="container">
-        <div class="blog-section latest-section">
-            <div class="row g-5">
-                @foreach($blogPosts as $blogPost) {{-- Assuming $blogPosts contains the list of blog posts --}}
-                <div class="col-lg-3 col-sm-6">
-                    <div class="blogs-wrapper product-wrapper" data-aos="fade-up">
-                        <div class="wrapper-img">
-                            <img src="{{ asset($blogPost->featured_image) }}" alt="{{ $blogPost->title }}" >
-                        </div>
-                        <div class="wrapper-info">
-                            <div class="wrapper-data">
-                                <div class="admin wrapper-item">
-                                    <span class="icon">
-                                        <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+    <!--------------- wishlist-section---------------->
+    <section class="cart product wishlist footer-padding" data-aos="fade-up">
+        <div class="container">
+            <div class="cart-section wishlist-section">
+                <table>
+                    <tbody>
+                        <tr class="table-row table-top-row">
+                            <td class="table-wrapper wrapper-product">
+                                <h5 class="table-heading">PRODUCT</h5>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="table-heading">PRICE</h5>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="table-heading">ACTION</h5>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-row ticket-row">
+                            <td class="table-wrapper wrapper-product">
+                                <div class="wrapper">
+                                    <div class="wrapper-img">
+                                        <img src="./assets/images/homepage-one/product-img/product-img-1.webp"
+                                            alt="img">
+                                    </div>
+                                    <div class="wrapper-content">
+                                        <h5 class="heading">Classic Oxford Shirt</h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="heading">$20.00</h5>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="..." fill="#AE1C9A" />
+                                            <path
+                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
+                                                fill="#AAAAAA"></path>
                                         </svg>
                                     </span>
-
                                 </div>
-                                <div class="comments wrapper-item">
-                                    <span class="icon">
-                                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                            </td>
+                        </tr>
+                        <tr class="table-row ticket-row">
+                            <td class="table-wrapper wrapper-product">
+                                <div class="wrapper">
+                                    <div class="wrapper-img">
+                                        <img src="./assets/images/homepage-one/product-img/product-img-2.webp"
+                                            alt="img">
+                                    </div>
+                                    <div class="wrapper-content">
+                                        <h5 class="heading">Classic Oxford Shirt</h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="heading">$20.00</h5>
+                                </div>
+                            </td>
+                            <td class="table-wrapper ">
+                                <div class="table-wrapper-center">
+                                    <span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="..." fill="#AE1C9A" />
+                                            <path
+                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
+                                                fill="#AAAAAA"></path>
                                         </svg>
                                     </span>
                                 </div>
-                            </div>
-                            <a href="{{ route('blog.show', $blogPost->slug) }}" class="about-details wrapper-details">
-                                {{ \Illuminate\Support\Str::limit($blogPost->title, 60) }}
-                            </a>
-                            <div class="divider"></div>
-                            <a href="{{ route('blog.show', $blogPost->slug) }}" class="shop-btn">
-                                Learn More
-                                <span>
-                                    <svg width="16" height="11" viewBox="0 0 16 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="..." fill="#AE1C9A" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
+                            </td>
+                        </tr>
+                        <tr class="table-row ticket-row">
+                            <td class="table-wrapper wrapper-product">
+                                <div class="wrapper">
+                                    <div class="wrapper-img">
+                                        <img src="./assets/images/homepage-one/product-img/product-img-3.webp"
+                                            alt="img">
+                                    </div>
+                                    <div class="wrapper-content">
+                                        <h5 class="heading">Classic Oxford Shirt</h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="heading">$20.00</h5>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
+                                                fill="#AAAAAA"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-row ticket-row">
+                            <td class="table-wrapper wrapper-product">
+                                <div class="wrapper">
+                                    <div class="wrapper-img">
+                                        <img src="./assets/images/homepage-one/product-img/product-img-4.webp"
+                                            alt="img">
+                                    </div>
+                                    <div class="wrapper-content">
+                                        <h5 class="heading">Classic Oxford Shirt</h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="heading">$20.00</h5>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
+                                                fill="#AAAAAA"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="wishlist-btn">
+                <a href="empty-wishlist.html" class="clean-btn">Clean Wishlist</a>
+                <a href="#" class="shop-btn">View Cards</a>
             </div>
         </div>
-    </div>
-</section>
-
-    <!--------------- blog-news-section---------------->
+    </section>
+    <!--------------- wishlist-end---------------->
 
     <!--------------- footer-section--------------->
     <section class="product footer">
@@ -1241,9 +1329,9 @@
                             </div>
                             <div class="footer-link order-link">
                                 <ul>
-                                    <li><a href="order.html">Track Order</a></li>
-                                    <li><a href="cart.html">Delivery & Returns</a></li>
-                                    <li><a href="about.html">Warranty</a></li>
+                                    <li><a href="{{route('user.order.index')}}">Track Order</a></li>
+                                    <li><a href="{{route('cart.index')}}">Delivery & Returns</a></li>
+                                    <li><a href="{{route('about.index')}}">Warranty</a></li>
                                 </ul>
                             </div>
 
@@ -1271,7 +1359,7 @@
                             </h4>
                             <div class="footer-link useful-link">
                                 <ul>
-                                    <li><a href="{{route('about.index')}}">Secure Payment</a></li>
+                                    <li><a href="about.html">Secure Payment</a></li>
                                     <li><a href="{{route('privacy.index')}}">Privacy Policy</a></li>
                                     <li><a href="{{route('term.index')}}">Terms of Use</a></li>
                                     <li><a href="product-sidebar.html">Archived Products</a></li>
@@ -1347,8 +1435,6 @@
         </div>
     </section>
     <!--------------- footer-section-end--------------->
-
-
 
 
 

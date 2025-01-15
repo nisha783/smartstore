@@ -1001,110 +1001,33 @@
                     <div class="header-nav-menu">
                         <ul class="menu-list">
                             <li>
-                                <a href="index.html">
+                                <a href="{{url('/')}}">
                                     <span class="list-text">Home</span>
                                 </a>
                             </li>
-                            <li class="mega-menu">
-                                <a href="product-sidebar.html">
-                                    <span class="list-text">Shop</span>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_183)">
-                                                <path
-                                                    d="M2.37811 5.89491C1.88356 5.89491 1.38862 5.90351 0.894066 5.89218C0.443267 5.88202 0.108098 5.59451 0.0178597 5.17027C-0.0641747 4.7851 0.137786 4.36204 0.508895 4.20305C0.659291 4.13859 0.83586 4.11008 1.00071 4.10851C1.93786 4.09992 2.87539 4.10461 3.81254 4.10422C4.07075 4.10422 4.10357 4.07062 4.10396 3.80889C4.10474 2.85847 4.102 1.90843 4.10513 0.958001C4.10669 0.513061 4.336 0.177111 4.71218 0.0501527C5.30752 -0.151027 5.88567 0.278287 5.89387 0.937687C5.90168 1.56232 5.89582 2.18735 5.89582 2.81237C5.89582 3.14441 5.89504 3.47646 5.89621 3.80811C5.897 4.07023 5.92942 4.10422 6.18685 4.10422C7.13728 4.105 8.08732 4.10265 9.03774 4.10539C9.48503 4.10656 9.81941 4.33235 9.94872 4.70776C10.1534 5.30192 9.72605 5.88437 9.06782 5.89413C8.50803 5.90233 7.94825 5.89608 7.38846 5.89608C6.97829 5.89608 6.56851 5.89491 6.15833 5.89687C5.93918 5.89804 5.897 5.94023 5.8966 6.1625C5.89543 7.11918 5.89778 8.07625 5.89543 9.03293C5.89426 9.48216 5.67238 9.81577 5.29736 9.94741C4.70437 10.1552 4.11841 9.72983 4.10669 9.07316C4.09771 8.57861 4.10474 8.08367 4.10474 7.58912C4.10474 7.12035 4.10552 6.65197 4.10435 6.1832C4.10396 5.93398 4.06841 5.89726 3.82387 5.89687C3.34221 5.89569 2.86055 5.89647 2.37889 5.89647C2.37811 5.8953 2.37811 5.8953 2.37811 5.89491Z"
-                                                    fill="white" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1_185">
-                                                    <rect width="10" height="10" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </a>
-                                <div class="shop-menu">
-                                    <div class="menu-wrapper">
-                                        <div class="menu-list">
-                                            <h5 class="menu-title">Dresses</h5>
-                                            <ul>
-                                                <li><a href="product-sidebar.html">Shirt</a></li>
-                                                <li><a href="product-sidebar.html">Skart</a></li>
-                                                <li><a href="product-sidebar.html"> T-Shirt</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="menu-list">
-                                            <h5 class="menu-title">Bags</h5>
-                                            <ul>
-                                                <li><a href="product-sidebar.html">HandBags</a></li>
-                                                <li><a href="product-sidebar.html">Mobile Bags</a></li>
-                                                <li><a href="product-sidebar.html">School Bags</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="menu-list">
-                                            <h5 class="menu-title">Cosmetics</h5>
-                                            <ul>
-                                                <li><a href="product-sidebar.html">Liptics</a></li>
-                                                <li><a href="product-sidebar.html">Foundation</a></li>
-                                                <li><a href="product-sidebar.html"> Eye Liner</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="shop-menu-img">
-                                        <img src="./assets/images/homepage-one/empty-wishlist.webp" alt="img">
-                                    </div>
-                                </div>
-                            </li>
                             <li>
-                                <a href="#">
-                                    <span class="list-text">Pages</span>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_1_183)">
-                                                <path
-                                                    d="M2.37811 5.89491C1.88356 5.89491 1.38862 5.90351 0.894066 5.89218C0.443267 5.88202 0.108098 5.59451 0.0178597 5.17027C-0.0641747 4.7851 0.137786 4.36204 0.508895 4.20305C0.659291 4.13859 0.83586 4.11008 1.00071 4.10851C1.93786 4.09992 2.87539 4.10461 3.81254 4.10422C4.07075 4.10422 4.10357 4.07062 4.10396 3.80889C4.10474 2.85847 4.102 1.90843 4.10513 0.958001C4.10669 0.513061 4.336 0.177111 4.71218 0.0501527C5.30752 -0.151027 5.88567 0.278287 5.89387 0.937687C5.90168 1.56232 5.89582 2.18735 5.89582 2.81237C5.89582 3.14441 5.89504 3.47646 5.89621 3.80811C5.897 4.07023 5.92942 4.10422 6.18685 4.10422C7.13728 4.105 8.08732 4.10265 9.03774 4.10539C9.48503 4.10656 9.81941 4.33235 9.94872 4.70776C10.1534 5.30192 9.72605 5.88437 9.06782 5.89413C8.50803 5.90233 7.94825 5.89608 7.38846 5.89608C6.97829 5.89608 6.56851 5.89491 6.15833 5.89687C5.93918 5.89804 5.897 5.94023 5.8966 6.1625C5.89543 7.11918 5.89778 8.07625 5.89543 9.03293C5.89426 9.48216 5.67238 9.81577 5.29736 9.94741C4.70437 10.1552 4.11841 9.72983 4.10669 9.07316C4.09771 8.57861 4.10474 8.08367 4.10474 7.58912C4.10474 7.12035 4.10552 6.65197 4.10435 6.1832C4.10396 5.93398 4.06841 5.89726 3.82387 5.89687C3.34221 5.89569 2.86055 5.89647 2.37889 5.89647C2.37811 5.8953 2.37811 5.8953 2.37811 5.89491Z"
-                                                    fill="white" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_1_18">
-                                                    <rect width="10" height="10" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                </a>
-                                <ul class="header-sub-menu">
-                                    <li><a href="product-info.html">Product-details</a></li>
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
-                                    <li><a href="terms.html">Terms & Condition</a></li>
-                                    <li><a href="faq.html">FAQ</a></li>
-                                    <li><a href="product-sidebar.html">Shop Category Icon</a></li>
-                                    <li><a href="product-sidebar.html">Shop List View</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="about.html">
+                                <a href="{{route('about.index')}}">
                                     <span class="list-text">About</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="blogs.html">
+                                <a href="{{route('blog.index')}}">
                                     <span class="list-text">Blog</span>
                                 </a>
-                                <ul class="header-sub-menu">
-                                    <li><a href="blogs-details.html">Blog-details</a></li>
-                                </ul>
                             </li>
                             <li>
-                                <a href="user-profile.html">
+                                <a href="{{route('user.dashboard.index')}}">
                                     <span class="list-text">User Dashboard</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="contact-us.html">
+                                <a href="{{route('contact.index')}}">
                                     <span class="list-text">Contact</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('user.wishlist.index')}}">
+                                    <span class="list-text">Wishlist</span>
                                 </a>
                             </li>
                         </ul>
@@ -1432,97 +1355,7 @@
 
                     </div>
                 </nav>
-                <div class="tab-content tab-item" id="nav-tabContent">
-
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
-                        tabindex="0" data-aos="fade-up">
-                        <div class="product-intro-section">
-                            <h5 class="intro-heading">Introduction</h5>
-                            <p class="product-details">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries but also the on leap into electronic typesetting,
-                                remaining essentially unchanged. It wasn’t popularised in the 1960s with the release of
-                                Letraset sheets containing Lorem Ipsum passages, andei more recently with desktop
-                                publishing software like Aldus PageMaker including versions of Lorem Ipsum to make a
-                                type specimen book.
-                            </p>
-                        </div>
-                        <div class="product-feature">
-                            <h5 class="intro-heading">Features :</h5>
-                            <ul>
-                                <li>
-                                    <p>slim body with metal cover</p>
-                                </li>
-                                <li>
-                                    <p>latest Intel Core i5-1135G7 processor (4 cores / 8 threads)</p>
-                                </li>
-                                <li>
-                                    <p>8GB DDR4 RAM and fast 512GB PCIe SSD</p>
-                                </li>
-                                <li>
-                                    <p>NVIDIA GeForce MX350 2GB GDDR5 graphics card backlit keyboard, touchpad with
-                                        gesture support</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab"
-                        tabindex="0">
-                        <div class="product-review-section" data-aos="fade-up">
-                            <h5 class="intro-heading">Reviews</h5>
-
-                            <div class="review-wrapper">
-                                <div class="wrapper">
-                                    <div class="wrapper-aurthor">
-                                        <div class="wrapper-info">
-                                            <div class="aurthor-img">
-                                                <img src="./assets/images/homepage-one/aurthor-img-1.webp"
-                                                    alt="aurthor-img">
-                                            </div>
-                                            <div class="author-details">
-                                                <h5>Sajjad Hossain</h5>
-                                                <p>London, UK</p>
-                                            </div>
-                                        </div>
-                                        <div class="ratings">
-                                            <span>
-                                                <svg width="75" height="15" viewBox="0 0 75 15" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
-                                                        fill="#FFA800" />
-                                                    <path
-                                                        d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z"
-                                                        fill="#FFA800" />
-                                                    <path
-                                                        d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z"
-                                                        fill="#FFA800" />
-                                                    <path
-                                                        d="M52.5 0L54.1839 5.18237H59.6329L55.2245 8.38525L56.9084 13.5676L52.5 10.3647L48.0916 13.5676L49.7755 8.38525L45.3671 5.18237H50.8161L52.5 0Z"
-                                                        fill="#FFA800" />
-                                                    <path
-                                                        d="M67.5 0L69.1839 5.18237H74.6329L70.2245 8.38525L71.9084 13.5676L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                                        fill="#FFA800" />
-                                                </svg>
-                                            </span>
-                                            <span>(5.0)</span>
-                                        </div>
-                                    </div>
-                                    <div class="wrapper-description">
-                                        <p class="wrapper-details">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
-                                            text ever since the redi 1500s, when an unknown printer took a galley of
-                                            type and scrambled it to make a type specimen book. It has survived not only
-                                            five centuries but also the on leap into electronic typesetting, remaining
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             
             </div>
         </div>
     </section>
@@ -2126,9 +1959,9 @@
                             </h4>
                             <div class="footer-link useful-link">
                                 <ul>
-                                    <li><a href="about.html">Secure Payment</a></li>
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
-                                    <li><a href="terms.html">Terms of Use</a></li>
+                                    <li><a href="{{route('about.index')}}">Secure Payment</a></li>
+                                    <li><a href="{{route('privacy.index')}}">Privacy Policy</a></li>
+                                    <li><a href="{{route('term.index')}}">Terms of Use</a></li>
                                     <li><a href="product-sidebar.html">Archived Products</a></li>
                                 </ul>
                             </div>

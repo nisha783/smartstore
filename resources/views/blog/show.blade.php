@@ -1014,9 +1014,6 @@
                                 <a href="{{route('blog.index')}}">
                                     <span class="list-text">Blog</span>
                                 </a>
-                                <ul class="header-sub-menu">
-                                    <li><a href="blogs-details.html">Blog-details</a></li>
-                                </ul>
                             </li>
                             <li>
                                 <a href="{{route('user.dashboard.index')}}">
@@ -1026,6 +1023,11 @@
                             <li>
                                 <a href="{{route('contact.index')}}">
                                     <span class="list-text">Contact</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{route('user.wishlist.index')}}">
+                                    <span class="list-text">Wishlist</span>
                                 </a>
                             </li>
                         </ul>
@@ -1569,9 +1571,9 @@
                             </h4>
                             <div class="footer-link useful-link">
                                 <ul>
-                                    <li><a href="about.html">Secure Payment</a></li>
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
-                                    <li><a href="terms.html">Terms of Use</a></li>
+                                <li><a href="{{route('about.index')}}">Secure Payment</a></li>
+                                    <li><a href="{{route('privacy.index')}}">Privacy Policy</a></li>
+                                    <li><a href="{{route('term.index')}}">Terms of Use</a></li>
                                     <li><a href="product-sidebar.html">Archived Products</a></li>
                                 </ul>
                             </div>

@@ -1028,6 +1028,11 @@
                                     <span class="list-text">Contact</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="{{route('user.wishlist.index')}}">
+                                    <span class="list-text">Wishlist</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="header-vendor-btn">

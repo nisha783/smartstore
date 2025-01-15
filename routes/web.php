@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\User\DashboardController;
 use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\OrderController;
@@ -23,6 +24,7 @@ Route::resource('/newsletter',NewsLetterController::class);
 Route::resource('/product',ProductController::class);
 Route::resource('/privacy',PrivacyController::class);
 Route::resource('/term',TermController::class);
+Route::resource('/faq',FaqController::class);
 
 Route::name('user.')->prefix('user')->middleware(['auth'])->group(function () {
     Route::resource('/dashboard', DashboardController::class);

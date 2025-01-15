@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
-class WishlistController extends Controller
+class FaqController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,7 +13,8 @@ class WishlistController extends Controller
     public function index()
     {
         //
-        return view('user.wishlist.index');
+        $faqs=Faq::all();
+        return view('faq.index',compact('faqs'));
     }
 
     /**
