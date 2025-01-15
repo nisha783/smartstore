@@ -1198,30 +1198,29 @@
                         </button>
 
                        
-
                         <div class="nav-link">
-                            <a href="{{route('login')}}">
-                                <span>
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <g clip-path="url(#clip0_113_3043)">
-                                            <path
-                                                d="M7.50224 15.7537C7.50224 16.0247 7.50895 16.2465 7.5 16.4683C7.4597 17.5682 6.52164 18.2515 5.4806 17.9155C4.00075 17.4383 2.52761 16.9387 1.05448 16.4392C0.380597 16.2107 0 15.6641 0 14.9405C0 10.4892 0 6.03569 0.00223881 1.58218C0.00223881 0.627852 0.629104 0.00955666 1.59403 0.00731646C4.28731 0.00283606 6.98284 -0.00164434 9.67612 0.000595862C11.0104 0.00283606 11.9798 0.961641 12 2.29904C12.0112 2.99126 12.0067 3.68124 12 4.37347C11.9955 4.90439 11.6933 5.25162 11.2478 5.25162C10.8022 5.25386 10.4955 4.90663 10.491 4.37571C10.4843 3.69693 10.4933 3.0159 10.4888 2.33712C10.4843 1.79276 10.209 1.50153 9.67388 1.49705C8.72463 1.48585 7.77761 1.49481 6.82836 1.49481C6.72313 1.49481 6.61791 1.49481 6.46791 1.49481C6.51492 1.55081 6.53284 1.59114 6.56418 1.60682C7.24254 1.91597 7.51119 2.46481 7.51119 3.1884C7.50672 6.72791 7.50895 10.2674 7.50895 13.8069C7.50895 13.9436 7.50895 14.0802 7.50895 14.2415C8.32164 14.2415 9.09179 14.2662 9.8597 14.2303C10.2649 14.2124 10.4888 13.8898 10.491 13.4396C10.4978 12.5031 10.4955 11.5645 10.4933 10.6259C10.4933 10.2854 10.594 10.0008 10.9119 9.83507C11.3888 9.58865 11.9754 9.89332 11.9888 10.4511C12.0179 11.5511 12.0493 12.6577 11.9664 13.7532C11.8746 14.9494 10.9052 15.7447 9.69403 15.7514C8.97537 15.7559 8.26343 15.7537 7.50224 15.7537Z" />
-                                            <path
-                                                d="M13.4942 6.75005C13.4942 6.02423 13.5009 5.33425 13.492 4.64651C13.4875 4.27463 13.5927 3.96997 13.9532 3.81539C14.3136 3.66082 14.6046 3.79523 14.8688 4.06181C15.8002 5.0027 16.7405 5.93462 17.674 6.87326C18.1061 7.30786 18.1129 7.69094 17.6897 8.11882C16.7494 9.06642 15.8024 10.0073 14.8599 10.9549C14.6091 11.2058 14.327 11.3402 13.9755 11.1946C13.6129 11.0445 13.492 10.7533 13.4964 10.3769C13.5032 9.68695 13.4987 8.99473 13.4987 8.24875C13.3576 8.24875 13.2345 8.24875 13.1114 8.24875C12.2808 8.24875 11.4479 8.25099 10.6173 8.24651C10.0711 8.24427 9.75315 7.962 9.75987 7.4938C9.76435 7.03456 10.0912 6.75453 10.6352 6.75229C11.5666 6.75005 12.5024 6.75005 13.4942 6.75005Z" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_113_3043">
-                                                <rect width="18" height="18" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span>
-                                <span class="text">
-                                    Logout
-                                </span>
-                            </a>
-                        </div>
+    <!-- Make sure the form uses POST for the logout route as per Laravel's logout system -->
+    <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+        @csrf
+        <button type="submit" style="background: none; border: none; padding: 0;">
+            <span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_113_3043)">
+                        <path d="M7.50224 15.7537C7.50224 16.0247 7.50895 16.2465 7.5 16.4683C7.4597 17.5682 6.52164 18.2515 5.4806 17.9155C4.00075 17.4383 2.52761 16.9387 1.05448 16.4392C0.380597 16.2107 0 15.6641 0 14.9405C0 10.4892 0 6.03569 0.00223881 1.58218C0.00223881 0.627852 0.629104 0.00955666 1.59403 0.00731646C4.28731 0.00283606 6.98284 -0.00164434 9.67612 0.000595862C11.0104 0.00283606 11.9798 0.961641 12 2.29904C12.0112 2.99126 12.0067 3.68124 12 4.37347C11.9955 4.90439 11.6933 5.25162 11.2478 5.25162C10.8022 5.25386 10.4955 4.90663 10.491 4.37571C10.4843 3.69693 10.4933 3.0159 10.4888 2.33712C10.4843 1.79276 10.209 1.50153 9.67388 1.49705C8.72463 1.48585 7.77761 1.49481 6.82836 1.49481C6.72313 1.49481 6.61791 1.49481 6.46791 1.49481C6.51492 1.55081 6.53284 1.59114 6.56418 1.60682C7.24254 1.91597 7.51119 2.46481 7.51119 3.1884C7.50672 6.72791 7.50895 10.2674 7.50895 13.8069C7.50895 13.9436 7.50895 14.0802 7.50895 14.2415C8.32164 14.2415 9.09179 14.2662 9.8597 14.2303C10.2649 14.2124 10.4888 13.8898 10.491 13.4396C10.4978 12.5031 10.4955 11.5645 10.4933 10.6259C10.4933 10.2854 10.594 10.0008 10.9119 9.83507C11.3888 9.58865 11.9754 9.89332 11.9888 10.4511C12.0179 11.5511 12.0493 12.6577 11.9664 13.7532C11.8746 14.9494 10.9052 15.7447 9.69403 15.7514C8.97537 15.7559 8.26343 15.7537 7.50224 15.7537Z" />
+                        <path d="M13.4942 6.75005C13.4942 6.02423 13.5009 5.33425 13.492 4.64651C13.4875 4.27463 13.5927 3.96997 13.9532 3.81539C14.3136 3.66082 14.6046 3.79523 14.8688 4.06181C15.8002 5.0027 16.7405 5.93462 17.674 6.87326C18.1061 7.30786 18.1129 7.69094 17.6897 8.11882C16.7494 9.06642 15.8024 10.0073 14.8599 10.9549C14.6091 11.2058 14.327 11.3402 13.9755 11.1946C13.6129 11.0445 13.492 10.7533 13.4964 10.3769C13.5032 9.68695 13.4987 8.99473 13.4987 8.24875C13.3576 8.24875 13.2345 8.24875 13.1114 8.24875C12.2808 8.24875 11.4479 8.25099 10.6173 8.24651C10.0711 8.24427 9.75315 7.962 9.75987 7.4938C9.76435 7.03456 10.0912 6.75453 10.6352 6.75229C11.5666 6.75005 12.5024 6.75005 13.4942 6.75005Z" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_113_3043">
+                            <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </span>
+            <span class="text">Logout</span>
+        </button>
+    </form>
+</div>
+
 
                     </div>
 
@@ -1246,7 +1245,7 @@
                         </div>
                         <div class="wrapper-content">
                             <p class="paragraph">New Orders</p>
-                            <h3 class="heading">3</h3> <!-- Example: dynamic new orders count -->
+                            <h3 class="heading">{{ Number::currency(auth()->user()->orders()->sum('total')) }}</h3> <!-- Example: dynamic new orders count -->
                         </div>
                     </div>
                 </div>
@@ -1256,8 +1255,8 @@
                             <!-- SVG Icon -->
                         </div>
                         <div class="wrapper-content">
-                            <p class="paragraph">New Orders</p>
-                            <h3 class="heading">3</h3> <!-- Example: dynamic new orders count -->
+                            <p class="paragraph">Wishlist</p>
+                            <h3 class="heading">{{ auth()->user()->wishlist()->count() }}</h3> <!-- Example: dynamic new orders count -->
                         </div>
                     </div>
                 </div>
@@ -1266,10 +1265,7 @@
                         <div class="wrapper-img">
                             <!-- SVG Icon -->
                         </div>
-                        <div class="wrapper-content">
-                            <p class="paragraph">New Orders</p>
-                            <h3 class="heading">3</h3> <!-- Example: dynamic new orders count -->
-                        </div>
+                      
                     </div>
                 </div>
                 <!-- Add more similar blocks as per your UI -->
@@ -1306,106 +1302,114 @@
 </div>
 
 
+
 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
     <div class="seller-application-section">
-        <div class="row ">
+        <div class="row">
             <div class="col-lg-7">
-            @if(session('success'))
-    <div class="alert alert-success" role="alert">
-        {{ session('success') }}
-    </div>
-@endif
+                @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
 
-@if(session('error'))
-    <div class="alert alert-danger" role="alert">
-        {{ session('error') }}
-    </div>
-@endif
-<form method="POST" action="{{ route('profile.update') }}">
-    @csrf
-    @method('PATCH')
-    <div class="account-section">
-        <div class="review-form">
-            <div class="account-inner-form">
-                <div class="review-form-name">
-                    <label for="firname" class="form-label">First Name*</label>
-                    <input type="text" id="firname" name="first_name" class="form-control" value="{{ old('first_name', auth()->user()->first_name) }}" placeholder="First Name">
-                    @error('first_name')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-                <div class="review-form-name">
-                    <label for="latname" class="form-label">Last Name*</label>
-                    <input type="text" id="latname" name="last_name" class="form-control" value="{{ old('last_name', auth()->user()->last_name) }}" placeholder="Last Name">
-                    @error('last_name')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="account-inner-form">
-                <div class="review-form-name">
-                    <label for="gmail" class="form-label">Email*</label>
-                    <input type="email" id="gmail" name="email" class="form-control" value="{{ old('email', auth()->user()->email) }}" placeholder="user@gmail.com">
-                    @error('email')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-                <div class="review-form-name">
-                    <label for="telephone" class="form-label">Phone*</label>
-                    <input type="tel" id="telephone" name="phone" class="form-control" value="{{ old('phone', auth()->user()->phone) }}" placeholder="+880388**0899">
-                    @error('phone')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="review-form-name">
-                <label for="region" class="form-label">Country*</label>
-                <select id="region" name="country" class="form-select">
-                    <option value="Bangladesh" {{ old('country', auth()->user()->country) == 'Bangladesh' ? 'selected' : '' }}>Bangladesh</option>
-                    <option value="United States" {{ old('country', auth()->user()->country) == 'United States' ? 'selected' : '' }}>United States</option>
-                    <option value="United Kingdom" {{ old('country', auth()->user()->country) == 'United Kingdom' ? 'selected' : '' }}>United Kingdom</option>
-                </select>
-                @error('country')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="review-form-name address-form">
-                <label for="addres" class="form-label">Address*</label>
-                <input type="text" id="addres" name="address" class="form-control" value="{{ old('address', auth()->user()->address) }}" placeholder="Enter your Address">
-                @error('address')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="account-inner-form city-inner-form">
-                <div class="review-form-name">
-                    <label for="teritory" class="form-label">Town / City*</label>
-                    <select id="teritory" name="city" class="form-select">
-                        <option value="New York" {{ old('city', auth()->user()->city) == 'New York' ? 'selected' : '' }}>New York</option>
-                        <option value="Dhaka" {{ old('city', auth()->user()->city) == 'Dhaka' ? 'selected' : '' }}>Dhaka</option>
-                        <option value="London" {{ old('city', auth()->user()->city) == 'London' ? 'selected' : '' }}>London</option>
-                    </select>
-                    @error('city')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-                <div class="review-form-name">
-                    <label for="post" class="form-label">Postcode / ZIP*</label>
-                    <input type="number" id="post" name="postcode" class="form-control" value="{{ old('postcode', auth()->user()->postcode) }}" placeholder="0000">
-                    @error('postcode')
-                        <div class="text-danger">{{ $message }}</div>
-                    @enderror
-                </div>
-            </div>
-            <div class="submit-btn">
-                <button type="submit" class="shop-btn update-btn">Update Profile</button>
-                <a href="#" class="shop-btn cancel-btn">Cancel</a>
-            </div>
-        </div>
-    </div>
-</form>
+                @if(session('error'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('error') }}
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
+                    @csrf
+                    @method('PATCH')
+                    <div class="account-section">
+                        <div class="review-form">
+                            <div class="account-inner-form">
+                                <div class="review-form-name">
+                                    <label for="firname" class="form-label">First Name*</label>
+                                    <input type="text" id="firname" name="first_name" class="form-control" value="{{ old('first_name', auth()->user()->first_name) }}" placeholder="First Name">
+                                    @error('first_name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="review-form-name">
+                                    <label for="latname" class="form-label">Last Name*</label>
+                                    <input type="text" id="latname" name="last_name" class="form-control" value="{{ old('last_name', auth()->user()->last_name) }}" placeholder="Last Name">
+                                    @error('last_name')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
 
+                            <!-- Email, Phone, Country and Address Fields -->
+                            <div class="account-inner-form">
+                                <div class="review-form-name">
+                                    <label for="gmail" class="form-label">Email*</label>
+                                    <input type="email" id="gmail" name="email" class="form-control" value="{{ old('email', auth()->user()->email) }}" placeholder="user@gmail.com">
+                                    @error('email')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="review-form-name">
+                                    <label for="telephone" class="form-label">Phone*</label>
+                                    <input type="tel" id="telephone" name="phone" class="form-control" value="{{ old('phone', auth()->user()->phone) }}" placeholder="+880388**0899">
+                                    @error('phone')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
 
+                            <!-- Country, City, Postcode Fields -->
+                            <div class="review-form-name">
+                                <label for="region" class="form-label">Country*</label>
+                                <select id="region" name="country" class="form-select">
+                                    <option value="Bangladesh" {{ old('country', auth()->user()->country) == 'Bangladesh' ? 'selected' : '' }}>Bangladesh</option>
+                                    <option value="United States" {{ old('country', auth()->user()->country) == 'United States' ? 'selected' : '' }}>United States</option>
+                                    <option value="United Kingdom" {{ old('country', auth()->user()->country) == 'United Kingdom' ? 'selected' : '' }}>United Kingdom</option>
+                                </select>
+                                @error('country')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="review-form-name address-form">
+                                <label for="addres" class="form-label">Address*</label>
+                                <input type="text" id="addres" name="address" class="form-control" value="{{ old('address', auth()->user()->address) }}" placeholder="Enter your Address">
+                                @error('address')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="account-inner-form city-inner-form">
+                                <div class="review-form-name">
+                                    <label for="teritory" class="form-label">Town / City*</label>
+                                    <select id="teritory" name="city" class="form-select">
+                                        <option value="New York" {{ old('city', auth()->user()->city) == 'New York' ? 'selected' : '' }}>New York</option>
+                                        <option value="Dhaka" {{ old('city', auth()->user()->city) == 'Dhaka' ? 'selected' : '' }}>Dhaka</option>
+                                        <option value="London" {{ old('city', auth()->user()->city) == 'London' ? 'selected' : '' }}>London</option>
+                                    </select>
+                                    @error('city')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="review-form-name">
+                                    <label for="post" class="form-label">Postcode / ZIP*</label>
+                                    <input type="number" id="post" name="postcode" class="form-control" value="{{ old('postcode', auth()->user()->postcode) }}" placeholder="0000">
+                                    @error('postcode')
+                                        <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="submit-btn">
+                                <button type="submit" class="shop-btn update-btn">Update Profile</button>
+                                <a href="#" class="shop-btn cancel-btn">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
+
             <div class="col-lg-5">
                 <div class="img-upload-section">
                     <div class="logo-wrapper">
@@ -1422,7 +1426,7 @@
                                         </svg>
                                     </span>
                                 </label>
-                                <input type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="input-file">
+                                <input type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="input-file" name="logo">
                             </div>
                         </div>
                     </div>
@@ -1593,738 +1597,272 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="v-pills-order" role="tabpanel"
-                            aria-labelledby="v-pills-order-tab" tabindex="0">
-                            <div class="cart-section">
-                                <table>
-                                    <tbody>
-                                        <tr class="table-row table-top-row">
-                                            <td class="table-wrapper wrapper-product">
-                                                <h5 class="table-heading">PRODUCT</h5>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="table-heading">PRICE</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="table-heading">QUANTITY</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper wrapper-total">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="table-heading">TOTAL</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="table-heading">ACTION</h5>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row ticket-row">
-                                            <td class="table-wrapper wrapper-product">
-                                                <div class="wrapper">
-                                                    <div class="wrapper-img">
-                                                        <img src="./assets/images/homepage-one/product-img/product-img-1.webp"
-                                                            alt="img">
-                                                    </div>
-                                                    <div class="wrapper-content">
-                                                        <h5 class="heading">Classic Design Skart</h5>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$20.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <div class="quantity">
-                                                        <span class="minus">
-                                                            -
-                                                        </span>
-                                                        <span class="number">1</span>
-                                                        <span class="plus">
-                                                            +
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper wrapper-total">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$40.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                fill="#AAAAAA"></path>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row ticket-row">
-                                            <td class="table-wrapper wrapper-product">
-                                                <div class="wrapper">
-                                                    <div class="wrapper-img">
-                                                        <img src="./assets/images/homepage-one/product-img/product-img-2.webp"
-                                                            alt="img">
-                                                    </div>
-                                                    <div class="wrapper-content">
-                                                        <h5 class="heading">Classic Black Suit</h5>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$20.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <div class="quantity">
-                                                        <span class="minus">
-                                                            -
-                                                        </span>
-                                                        <span class="number">1</span>
-                                                        <span class="plus">
-                                                            +
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper wrapper-total">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$40.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper ">
-                                                <div class="table-wrapper-center">
-                                                    <span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                fill="#AAAAAA"></path>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row ticket-row">
-                                            <td class="table-wrapper wrapper-product">
-                                                <div class="wrapper">
-                                                    <div class="wrapper-img">
-                                                        <img src="./assets/images/homepage-one/product-img/product-img-3.webp"
-                                                            alt="img">
-                                                    </div>
-                                                    <div class="wrapper-content">
-                                                        <h5 class="heading">Blue Party Dress</h5>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$20.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <div class="quantity">
-                                                        <span class="minus">
-                                                            -
-                                                        </span>
-                                                        <span class="number">1</span>
-                                                        <span class="plus">
-                                                            +
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper wrapper-total">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$40.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                fill="#AAAAAA"></path>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr class="table-row ticket-row">
-                                            <td class="table-wrapper wrapper-product">
-                                                <div class="wrapper">
-                                                    <div class="wrapper-img">
-                                                        <img src="./assets/images/homepage-one/product-img/product-img-4.webp"
-                                                            alt="img">
-                                                    </div>
-                                                    <div class="wrapper-content">
-                                                        <h5 class="heading">Classic Party Dress</h5>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$20.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <div class="quantity">
-                                                        <span class="minus">
-                                                            -
-                                                        </span>
-                                                        <span class="number">1</span>
-                                                        <span class="plus">
-                                                            +
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper wrapper-total">
-                                                <div class="table-wrapper-center">
-                                                    <h5 class="heading">$40.00</h5>
-                                                </div>
-                                            </td>
-                                            <td class="table-wrapper">
-                                                <div class="table-wrapper-center">
-                                                    <span>
-                                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                fill="#AAAAAA"></path>
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-order-tab" tabindex="0">
+    <div class="payment-section">
+        <div class="wrapper">
+            @forelse (auth()->user()->orders()->latest()->take(5)->get() as $order)
+            <div class="wrapper-item">
+                <div class="wrapper-img">
+                    <img src="{{ asset('assets/images/homepage-one/'.$order->payment_method->image) }}" alt="{{ $order->payment_method->method_name }}">
+                </div>
+                <div class="wrapper-content">
+                    <h5 class="heading">{{ $order->payment_method->method_name }}</h5>
+                    <p class="paragraph">{{ $order->bank_name }}</p>
+                    <p class="verified">{{ $order->verified ? 'Verified' : 'Not Verified' }}</p>
+                    <p>Order ID: {{ $order->id }}</p>
+                    <p>Amount: ${{ $order->amount }}</p>
+                </div>
+            </div>
+            <a href="" class="shop-btn">Manage</a>
+            <hr>
+            @empty
+            <p class="text-dark">No orders found.</p>
+            @endforelse
+        </div>
+        <!-- Add Cart and Add Bank modals remain static as before -->
+        <div class="wrapper-btn">
+            <a href="#" class="shop-btn" onclick="modalAction('.cart')">Add Cart</a>
+
+            <!-- cart-modal remains unchanged -->
+            <!-- bank-modal remains unchanged -->
+
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel" aria-labelledby="v-pills-wishlist-tab" tabindex="0">
+    <div class="wishlist">
+        <div class="cart-content">
+            <h5 class="cart-heading">SpaceRace</h5>
+            <p>Order ID: <span class="inner-text">#4345</span></p>
+        </div>
+        <div class="cart-section wishlist-section">
+            <table>
+                <tbody>
+                    <tr class="table-row table-top-row">
+                        <td class="table-wrapper wrapper-product">
+                            <h5 class="table-heading">PRODUCT</h5>
+                        </td>
+                        <td class="table-wrapper">
+                            <div class="table-wrapper-center">
+                                <h5 class="table-heading">PRICE</h5>
+                            </div>
+                        </td>
+                        <td class="table-wrapper">
+                            <div class="table-wrapper-center">
+                                <h5 class="table-heading">ACTION</h5>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    @forelse(auth()->user()->wishlist as $wishlistItem)
+                        <tr class="table-row ticket-row">
+                            <td class="table-wrapper wrapper-product">
+                                <div class="wrapper">
+                                    <div class="wrapper-img">
+                                        <img src="{{ asset('assets/images/homepage-one/product-img/' . $wishlistItem->product->image) }}" alt="{{ $wishlistItem->product->name }}">
+                                    </div>
+                                    <div class="wrapper-content">
+                                        <h5 class="heading">{{ $wishlistItem->product->name }}</h5>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <h5 class="heading">${{ $wishlistItem->product->price }}</h5>
+                                </div>
+                            </td>
+                            <td class="table-wrapper">
+                                <div class="table-wrapper-center">
+                                    <span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z" fill="#AAAAAA"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </td>
+                        </tr>
+                    @empty
+                        <tr class="table-row">
+                            <td colspan="3" class="text-center mt-3">Your wishlist is empty.</td>
+                        </tr>
+                    @endforelse
+                </tbody>
+            </table>
+        </div>
+        <div class="wishlist-btn">
+            <a href="#" class="clean-btn">Clean Wishlist</a>
+            <a href="#" class="shop-btn">View Cards</a>
+        </div>
+    </div>
+</div>
+
+<div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab" tabindex="0">
+    <div class="profile-section address-section addresses ">
+        <h4>Address</h4>
+        <div class="row gy-md-0 g-5">
+            @forelse (auth()->user()->addresses as $address)
+                <div class="col-md-6">
+                    <div class="seller-info">
+                        <h5 class="heading">Address-{{ $loop->iteration }}</h5>
+                        <div class="info-list">
+                            <div class="info-title">
+                                <p>Name:</p>
+                                <p>Email:</p>
+                                <p>Phone:</p>
+                                <p>City:</p>
+                                <p>Zip:</p>
+                            </div>
+                            <div class="info-details">
+                                <p>{{ $address->name }}</p>
+                                <p>{{ $address->email }}</p>
+                                <p>{{ $address->phone }}</p>
+                                <p>{{ $address->city }}</p>
+                                <p>{{ $address->zip }}</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            @empty
+                <div class="col-md-12">
+                    <p>You have no saved addresses.</p>
+                </div>
+            @endforelse
 
-                        <div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel"
-                            aria-labelledby="v-pills-wishlist-tab" tabindex="0">
+            <div class="col-lg-6">
+                <a href="#" class="shop-btn" onclick="modalAction('.submit')">Add New Address</a>
+                <!-- Modal for adding a new address -->
+                <div class="modal-wrapper submit">
+                    <div onclick="modalAction('.submit')" class="anywhere-away"></div>
 
-                            <div class="wishlist">
-                                <div class="cart-content">
-                                    <h5 class="cart-heading">SpaceRace</h5>
-                                    <p>Order ID: <span class="inner-text">#4345</span></p>
-                                </div>
-                                <div class="cart-section wishlist-section">
-                                    <table>
-                                        <tbody>
-                                            <tr class="table-row table-top-row">
-                                                <td class="table-wrapper wrapper-product">
-                                                    <h5 class="table-heading">PRODUCT</h5>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <h5 class="table-heading">PRICE</h5>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <h5 class="table-heading">ACTION</h5>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-row ticket-row">
-                                                <td class="table-wrapper wrapper-product">
-                                                    <div class="wrapper">
-                                                        <div class="wrapper-img">
-                                                            <img src="./assets/images/homepage-one/product-img/product-img-1.webp"
-                                                                alt="img">
-                                                        </div>
-                                                        <div class="wrapper-content">
-                                                            <h5 class="heading">Classic Design Skart</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <h5 class="heading">$20.00</h5>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <span>
-                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                    fill="#AAAAAA"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-row ticket-row">
-                                                <td class="table-wrapper wrapper-product">
-                                                    <div class="wrapper">
-                                                        <div class="wrapper-img">
-                                                            <img src="./assets/images/homepage-one/product-img/product-img-2.webp"
-                                                                alt="img">
-                                                        </div>
-                                                        <div class="wrapper-content">
-                                                            <h5 class="heading">Classic Black Suit</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <h5 class="heading">$20.00</h5>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper ">
-                                                    <div class="table-wrapper-center">
-                                                        <span>
-                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                    fill="#AAAAAA"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-row ticket-row">
-                                                <td class="table-wrapper wrapper-product">
-                                                    <div class="wrapper">
-                                                        <div class="wrapper-img">
-                                                            <img src="./assets/images/homepage-one/product-img/product-img-3.webp"
-                                                                alt="img">
-                                                        </div>
-                                                        <div class="wrapper-content">
-                                                            <h5 class="heading">Blue Party Dress</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <h5 class="heading">$20.00</h5>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <span>
-                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                    fill="#AAAAAA"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr class="table-row ticket-row">
-                                                <td class="table-wrapper wrapper-product">
-                                                    <div class="wrapper">
-                                                        <div class="wrapper-img">
-                                                            <img src="./assets/images/homepage-one/product-img/product-img-4.webp"
-                                                                alt="img">
-                                                        </div>
-                                                        <div class="wrapper-content">
-                                                            <h5 class="heading">Classic Party Dress</h5>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <h5 class="heading">$20.00</h5>
-                                                    </div>
-                                                </td>
-                                                <td class="table-wrapper">
-                                                    <div class="table-wrapper-center">
-                                                        <span>
-                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path
-                                                                    d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                                    fill="#AAAAAA"></path>
-                                                            </svg>
-                                                        </span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="wishlist-btn">
-                                    <a href="#" class="clean-btn">Clean Wishlist</a>
-                                    <a href="#" class="shop-btn">View Cards</a>
+                    <!-- Modal Content -->
+                    <div class="login-section account-section modal-main">
+                        <div class="review-form">
+                            <div class="review-content">
+                                <h5 class="comment-title">Add Your Address</h5>
+                                <div class="close-btn">
+                                    <img src="./assets/images/homepage-one/close-btn.png" onclick="modalAction('.submit')" alt="close-btn">
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-address" role="tabpanel"
-                            aria-labelledby="v-pills-address-tab" tabindex="0">
-                            <div class="profile-section address-section addresses ">
-                                <div class="row gy-md-0 g-5">
-                                    <div class="col-md-6">
-                                        <div class="seller-info">
-                                            <h5 class="heading">Address-01</h5>
-                                            <div class="info-list">
-                                                <div class="info-title">
-                                                    <p>Name:</p>
-                                                    <p>Email:</p>
-                                                    <p>Phone:</p>
-                                                    <p>City:</p>
-                                                    <p>Zip:</p>
-                                                </div>
-                                                <div class="info-details">
-                                                    <p>Sajjad</p>
-                                                    <p>demoemail@gmail.com</p>
-                                                    <p>023 434 54354</p>
-                                                    <p>Haydarabad, Rord 34</p>
-                                                    <p>3454</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="seller-info">
-                                            <h5 class="heading">Address-02</h5>
-                                            <div class="info-list">
-                                                <div class="info-title">
-                                                    <p>Name:</p>
-                                                    <p>Email:</p>
-                                                    <p>Phone:</p>
-                                                    <p>City:</p>
-                                                    <p>Zip:</p>
-                                                </div>
-                                                <div class="info-details">
-                                                    <p>Sajjad</p>
-                                                    <p>demoemail@gmail.com</p>
-                                                    <p>023 434 54354</p>
-                                                    <p>Haydarabad, Rord 34</p>
-                                                    <p>3454</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <a href="#" class="shop-btn" onclick="modalAction('.submit')">Add New
-                                            Address</a>
-                                        <!-- modal -->
-                                        <div class="modal-wrapper submit">
-                                            <div onclick="modalAction('.submit')" class="anywhere-away"></div>
-
-                                            <!-- change this -->
-                                            <div class="login-section account-section modal-main">
-                                                <div class="review-form">
-                                                    <div class="review-content">
-                                                        <h5 class="comment-title">Add Your Address</h5>
-                                                        <div class="close-btn">
-                                                            <img src="./assets/images/homepage-one/close-btn.png"
-                                                                onclick="modalAction('.submit')" alt="close-btn">
-                                                        </div>
-                                                    </div>
-                                                    <div class=" account-inner-form">
-                                                        <div class="review-form-name">
-                                                            <label for="firstname" class="form-label">First
-                                                                Name*</label>
-                                                            <input type="text" id="firstname" class="form-control"
-                                                                placeholder="First Name">
-                                                        </div>
-                                                        <div class="review-form-name">
-                                                            <label for="lastname" class="form-label">Last Name*</label>
-                                                            <input type="text" id="lastname" class="form-control"
-                                                                placeholder="Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class=" account-inner-form">
-                                                        <div class="review-form-name">
-                                                            <label for="useremail" class="form-label">Email*</label>
-                                                            <input type="email" id="useremail" class="form-control"
-                                                                placeholder="user@gmail.com">
-                                                        </div>
-                                                        <div class="review-form-name">
-                                                            <label for="userphone" class="form-label">Phone*</label>
-                                                            <input type="tel" id="userphone" class="form-control"
-                                                                placeholder="+880388**0899">
-                                                        </div>
-                                                    </div>
-                                                    <div class="review-form-name address-form">
-                                                        <label for="useraddress" class="form-label">Address*</label>
-                                                        <input type="text" id="useraddress" class="form-control"
-                                                            placeholder="Enter your Address">
-                                                    </div>
-                                                    <div class=" account-inner-form city-inner-form">
-                                                        <div class="review-form-name">
-                                                            <label for="usercity" class="form-label">Town /
-                                                                City*</label>
-                                                            <select id="usercity" class="form-select">
-                                                                <option>Choose...</option>
-                                                                <option>Newyork</option>
-                                                                <option>Dhaka</option>
-                                                                <option selected>London</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="review-form-name">
-                                                            <label for="usernumber" class="form-label">Postcode /
-                                                                ZIP*</label>
-                                                            <input type="number" id="usernumber" class="form-control"
-                                                                placeholder="0000">
-                                                        </div>
-                                                    </div>
-                                                    <div class="login-btn text-center">
-                                                        <a href="#" onclick="modalAction('.submit')"
-                                                            class="shop-btn">Add Address</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- change this -->
-
-                                        </div>
-                                    </div>
+                            <div class="account-inner-form">
+                                <div class="review-form-name">
+                                    <label for="firstname" class="form-label">First Name*</label>
+                                    <input type="text" id="firstname" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="review-form-name">
+                                    <label for="lastname" class="form-label">Last Name*</label>
+                                    <input type="text" id="lastname" class="form-control" placeholder="Last Name">
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-review" role="tabpanel"
-                            aria-labelledby="v-pills-review-tab" tabindex="0">
-
-                            <div class="top-selling-section">
-                                <div class="row g-5">
-                                    <div class="col-md-6">
-                                        <div class="product-wrapper">
-                                            <div class="product-img">
-                                                <img src="./assets/images/homepage-one/product-img/product-img-5.webp"
-                                                    alt="product-img">
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="review-date">
-                                                    <p>July 22, 2022</p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <span>
-                                                        <svg width="75" height="15" viewBox="0 0 75 15" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M52.5 0L54.1839 5.18237H59.6329L55.2245 8.38525L56.9084 13.5676L52.5 10.3647L48.0916 13.5676L49.7755 8.38525L45.3671 5.18237H50.8161L52.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M67.5 0L69.1839 5.18237H74.6329L70.2245 8.38525L71.9084 13.5676L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                                                fill="#FFA800" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <div class="product-description">
-                                                    <a href="product-sidebar.html" class="product-details">Rainbow
-                                                        Sequin Dress
-                                                    </a>
-                                                    <p>Didn't I tell you not put your phone on charge because weekend?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="product-cart-btn">
-                                                <a href="cart.html" class="product-btn">Edit Review</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="product-wrapper">
-                                            <div class="product-img">
-                                                <img src="./assets/images/homepage-one/product-img/product-img-6.webp"
-                                                    alt="product-img">
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="review-date">
-                                                    <p>July 22, 2022</p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <span>
-                                                        <svg width="75" height="15" viewBox="0 0 75 15" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M52.5 0L54.1839 5.18237H59.6329L55.2245 8.38525L56.9084 13.5676L52.5 10.3647L48.0916 13.5676L49.7755 8.38525L45.3671 5.18237H50.8161L52.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M67.5 0L69.1839 5.18237H74.6329L70.2245 8.38525L71.9084 13.5676L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                                                fill="#FFA800" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <div class="product-description">
-                                                    <a href="product-sidebar.html" class="product-details">Rainbow
-                                                        Sequin Dress
-                                                    </a>
-                                                    <p>Didn't I tell you not put your phone on charge because weekend?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="product-cart-btn">
-                                                <a href="cart.html" class="product-btn">Edit Review</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="product-wrapper">
-                                            <div class="product-img">
-                                                <img src="./assets/images/homepage-one/product-img/product-img-7.webp"
-                                                    alt="product-img">
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="review-date">
-                                                    <p>July 22, 2022</p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <span>
-                                                        <svg width="75" height="15" viewBox="0 0 75 15" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M52.5 0L54.1839 5.18237H59.6329L55.2245 8.38525L56.9084 13.5676L52.5 10.3647L48.0916 13.5676L49.7755 8.38525L45.3671 5.18237H50.8161L52.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M67.5 0L69.1839 5.18237H74.6329L70.2245 8.38525L71.9084 13.5676L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                                                fill="#FFA800" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <div class="product-description">
-                                                    <a href="product-sidebar.html" class="product-details">Rainbow
-                                                        Sequin Dress
-                                                    </a>
-                                                    <p>Didn't I tell you not put your phone on charge because weekend?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="product-cart-btn">
-                                                <a href="cart.html" class="product-btn">Edit Review</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="product-wrapper">
-                                            <div class="product-img">
-                                                <img src="./assets/images/homepage-one/product-img/product-img-8.webp"
-                                                    alt="product-img">
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="review-date">
-                                                    <p>July 22, 2022</p>
-                                                </div>
-                                                <div class="ratings">
-                                                    <span>
-                                                        <svg width="75" height="15" viewBox="0 0 75 15" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M22.5 0L24.1839 5.18237H29.6329L25.2245 8.38525L26.9084 13.5676L22.5 10.3647L18.0916 13.5676L19.7755 8.38525L15.3671 5.18237H20.8161L22.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M37.5 0L39.1839 5.18237H44.6329L40.2245 8.38525L41.9084 13.5676L37.5 10.3647L33.0916 13.5676L34.7755 8.38525L30.3671 5.18237H35.8161L37.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M52.5 0L54.1839 5.18237H59.6329L55.2245 8.38525L56.9084 13.5676L52.5 10.3647L48.0916 13.5676L49.7755 8.38525L45.3671 5.18237H50.8161L52.5 0Z"
-                                                                fill="#FFA800" />
-                                                            <path
-                                                                d="M67.5 0L69.1839 5.18237H74.6329L70.2245 8.38525L71.9084 13.5676L67.5 10.3647L63.0916 13.5676L64.7755 8.38525L60.3671 5.18237H65.8161L67.5 0Z"
-                                                                fill="#FFA800" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <div class="product-description">
-                                                    <a href="product-sidebar.html" class="product-details">Rainbow
-                                                        Sequin Dress
-                                                    </a>
-                                                    <p>Didn't I tell you not put your phone on charge because weekend?
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="product-cart-btn">
-                                                <a href="cart.html" class="product-btn">Edit Review</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="account-inner-form">
+                                <div class="review-form-name">
+                                    <label for="useremail" class="form-label">Email*</label>
+                                    <input type="email" id="useremail" class="form-control" placeholder="user@gmail.com">
+                                </div>
+                                <div class="review-form-name">
+                                    <label for="userphone" class="form-label">Phone*</label>
+                                    <input type="tel" id="userphone" class="form-control" placeholder="+880388**0899">
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="v-pills-password" role="tabpanel"
-                            aria-labelledby="v-pills-password-tab" tabindex="0">
-                            <div class="row align-items-center">
-                                <div class="col-lg-6">
-                                    <div class="form-section">
-                                        <form action="#">
-                                            <div class="currentpass form-item">
-                                                <label for="currentpass" class="form-label">Current Password*</label>
-                                                <input type="password" class="form-control" id="currentpass"
-                                                    placeholder="******">
-                                            </div>
-                                            <div class="password form-item">
-                                                <label for="pass" class="form-label">Password*</label>
-                                                <input type="password" class="form-control" id="pass"
-                                                    placeholder="******">
-                                            </div>
-                                            <div class="re-password form-item">
-                                                <label for="repass" class="form-label">Re-enter Password*</label>
-                                                <input type="password" class="form-control" id="repass"
-                                                    placeholder="******">
-                                            </div>
-                                        </form>
-                                        <div class="form-btn">
-                                            <a href="#" class="shop-btn">Upldate Password</a>
-                                            <a href="#" class="shop-btn cancel-btn">Cancel</a>
-                                        </div>
-                                    </div>
+                            <div class="review-form-name address-form">
+                                <label for="useraddress" class="form-label">Address*</label>
+                                <input type="text" id="useraddress" class="form-control" placeholder="Enter your Address">
+                            </div>
+                            <div class="account-inner-form city-inner-form">
+                                <div class="review-form-name">
+                                    <label for="usercity" class="form-label">Town / City*</label>
+                                    <select id="usercity" class="form-select">
+                                        <option>Choose...</option>
+                                        <option>New York</option>
+                                        <option>Dhaka</option>
+                                        <option selected>London</option>
+                                    </select>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="reset-img text-end">
-                                        <img src="./assets/images/homepage-one/reset.webp" alt="reset">
-                                    </div>
+                                <div class="review-form-name">
+                                    <label for="usernumber" class="form-label">Postcode / ZIP*</label>
+                                    <input type="number" id="usernumber" class="form-control" placeholder="0000">
                                 </div>
                             </div>
+                            <div class="login-btn text-center">
+                                <a href="#" onclick="modalAction('.submit')" class="shop-btn">Add Address</a>
+                            </div>
                         </div>
+                    </div>
+                    <!-- Modal End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+                
+<div class="tab-pane fade" id="v-pills-password" role="tabpanel" aria-labelledby="v-pills-password-tab" tabindex="0">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <div class="form-section">
+                <!-- Start of the form -->
+                @if ($errors->any())
+                        <div>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    @if (session('success'))
+                        <div>
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                <form action="{{ route('password.update') }}" method="POST">
+                    @csrf
+                    @method('PUT')
+
+                    <div class="currentpass form-item">
+                        <label for="currentpass" class="form-label">Current Password*</label>
+                        <input type="password" class="form-control" id="currentpass" name="current_password" placeholder="******">
+                        @error('current_password')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="password form-item">
+                        <label for="pass" class="form-label">New Password*</label>
+                        <input type="password" class="form-control" id="pass" name="password" placeholder="******">
+                        @error('password')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="re-password form-item">
+                        <label for="repass" class="form-label">Re-enter Password*</label>
+                        <input type="password" class="form-control" id="repass" name="password_confirmation" placeholder="******">
+                        @error('password_confirmation')
+                            <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-btn">
+                        <button type="submit" class="shop-btn">Update Password</button>
+                    </div>
+                </form>
+                <!-- End of the form -->
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="reset-img text-end">
+                <img src="./assets/images/homepage-one/reset.webp" alt="reset">
+            </div>
+        </div>
+    </div>
+</div>
+
 
                         <div class="tab-pane fade" id="v-pills-ticket" role="tabpanel"
                             aria-labelledby="v-pills-ticket-tab" tabindex="0">
