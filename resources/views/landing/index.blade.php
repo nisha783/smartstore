@@ -26,57 +26,7 @@
     </div>
 </section>
 
-    <section class="product fashion-style">
-        <div class="container">
-            <div class="style-section">
-                <div class="row gy-4 gx-5 gy-lg-0">
-                <div class="col-lg-6">
-    <div class="product-wrapper wrapper-one position-relative text-white" data-aos="fade-right" style="background-image: url('21146.jpg'); background-size: cover; background-position: center;">
-        <!-- Overlay -->
-        <div class="overlay position-absolute w-100 h-100"></div>
-        <div class="wrapper-info position-relative">
-            <span class="wrapper-subtitle">NEW STYLE</span>
-            <h4 class="wrapper-details">Get 65% Offer
-                <span class="wrapper-inner-title">& Make New</span> Fusion.
-            </h4>
-            <a href="product-sidebar.html" class="shop-btn">Shop Now
-                <span>
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632" transform="rotate(45 1.45312 0.914062)" />
-                        <rect x="8" y="7.45703" width="9.25346" height="2.05632" transform="rotate(135 8 7.45703)" />
-                    </svg>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="col-lg-6">
-    <div class="product-wrapper wrapper-two position-relative text-white" data-aos="fade-up" style="background-image: url('3.webp'); background-size: cover; background-position: center;">
-        <!-- Overlay -->
-        <div class="overlay position-absolute w-100 h-100"></div>
-        <div class="wrapper-info position-relative">
-            <span class="wrapper-subtitle">Mega OFFER</span>
-            <h4 class="wrapper-details">
-                Make your New
-                <span class="wrapper-inner-title">Styles with Our</span>
-                Products
-            </h4>
-            <a href="product-sidebar.html" class="shop-btn">Shop Now
-                <span>
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632" transform="rotate(45 1.45312 0.914062)" />
-                        <rect x="8" y="7.45703" width="9.25346" height="2.05632" transform="rotate(135 8 7.45703)" />
-                    </svg>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!--------------- style-section-end --------------->
 
     
@@ -177,6 +127,57 @@
             </div>
         </div>
     </section>
+    <section class="product fashion-style">
+        <div class="container">
+            <div class="style-section">
+                <div class="row gy-4 gx-5 gy-lg-0">
+                <div class="col-lg-6">
+    <div class="product-wrapper wrapper-one position-relative text-white" data-aos="fade-right" style="background-image: url('21146.jpg'); background-size: cover; background-position: center;">
+        <!-- Overlay -->
+        <div class="overlay position-absolute w-100 h-100"></div>
+        <div class="wrapper-info position-relative">
+            <span class="wrapper-subtitle">NEW STYLE</span>
+            <h4 class="wrapper-details">Get 65% Offer
+                <span class="wrapper-inner-title">& Make New</span> Fusion.
+            </h4>
+            <a href="product-sidebar.html" class="shop-btn">Shop Now
+                <span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632" transform="rotate(45 1.45312 0.914062)" />
+                        <rect x="8" y="7.45703" width="9.25346" height="2.05632" transform="rotate(135 8 7.45703)" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="product-wrapper wrapper-two position-relative text-white" data-aos="fade-up" style="background-image: url('3.webp'); background-size: cover; background-position: center;">
+        <!-- Overlay -->
+        <div class="overlay position-absolute w-100 h-100"></div>
+        <div class="wrapper-info position-relative">
+            <span class="wrapper-subtitle">Mega OFFER</span>
+            <h4 class="wrapper-details">
+                Make your New
+                <span class="wrapper-inner-title">Styles with Our</span>
+                Products
+            </h4>
+            <a href="product-sidebar.html" class="shop-btn">Shop Now
+                <span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632" transform="rotate(45 1.45312 0.914062)" />
+                        <rect x="8" y="7.45703" width="9.25346" height="2.05632" transform="rotate(135 8 7.45703)" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="product-category py-5">
     <div class="container">
         <div class="section-title text-center mb-4">
@@ -218,7 +219,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
                             <div class="product-img">
-                                <img src="{{ Storage::url($product->image) }}"
+                                <img src="{{ asset('storage/' . $product->image) }}"
                                     alt="product-img">
                                 <div class="product-cart-items">
                                     <a href="#" class="cart cart-item">

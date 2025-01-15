@@ -935,7 +935,29 @@
     <script src="{{ asset('assets/js/aos-3.0.0.js') }}"></script>
     <script src="{{ asset('assets/js/swiper10-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/shopus.js') }}"></script>
+    @include('inc.alert')
+    <script>
+        // Listen for cart updates
+        Livewire.on('cart-updated', ({
+            count
+        }) => {
+            // Update cart count in navbar or wherever you display it
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = count;
+            }
+        });
 
+        // Listen for notifications
+        Livewire.on('notify', ({
+            message,
+            type
+        }) => {
+            // Use your preferred notification library (e.g., Toastr, Sweet Alert)
+            // Example with Toastr:
+            toastr[type](message);
+        });
+    </script>
 </body>
 
 </html>
