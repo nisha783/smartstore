@@ -1180,35 +1180,7 @@
                             </span>
                         </button>
 
-                        <button class="nav-link" id="v-pills-review-tab" data-bs-toggle="pill"
-                            data-bs-target="#v-pills-review" type="button" role="tab" aria-controls="v-pills-review"
-                            aria-selected="false">
-                            <span>
-                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_113_3028)">
-                                        <path
-                                            d="M9.2481 10.6955C9.42603 10.6955 9.5544 10.6955 9.68504 10.6955C10.8044 10.6955 11.9238 10.6933 13.0431 10.6955C14.2729 10.7 14.8224 11.6158 14.2413 12.6692C14.2008 12.7401 14.2053 12.8665 14.2413 12.9419C14.4801 13.4365 14.4328 13.8888 14.104 14.3301C14.0454 14.41 14.0274 14.563 14.0612 14.6606C14.2278 15.1462 14.1625 15.5764 13.8382 15.9822C13.7706 16.0665 13.7436 16.2328 13.7751 16.3392C14.0341 17.1974 13.4756 17.9825 12.5612 17.9869C10.4418 17.9958 8.32242 17.9913 6.20305 17.9891C5.67603 17.9891 5.63549 17.9403 5.63549 17.4325C5.63549 15.0752 5.63098 12.718 5.6445 10.3629C5.64675 10.1633 5.72783 9.92604 5.8517 9.76859C6.6445 8.78178 7.16251 7.68408 7.35396 6.43781C7.48459 5.58404 8.0026 5.35563 8.74585 5.82354C9.45305 6.26927 9.71206 6.9545 9.76161 7.7373C9.81792 8.60437 9.61747 9.43596 9.37422 10.2609C9.34044 10.3851 9.30441 10.507 9.2481 10.6955Z" />
-                                        <path
-                                            d="M4.78 14.1924C4.78 15.2236 4.78 16.2548 4.78 17.2859C4.78 17.7272 4.57504 17.9778 4.13135 17.9845C3.10883 18.0022 2.08405 18.0044 1.06153 17.9845C0.570537 17.9756 0.270987 17.592 0.270987 17.0398C0.268735 15.2702 0.270987 13.5006 0.270987 11.7309C0.270987 11.5668 0.26423 11.4027 0.273239 11.2386C0.298014 10.7352 0.629095 10.3982 1.1336 10.3937C2.10883 10.3849 3.08405 10.3826 4.05928 10.3937C4.56603 10.3982 4.78 10.6332 4.78 11.1322C4.78 12.1523 4.78 13.1724 4.78 14.1924ZM1.92189 12.3629C2.31828 12.3674 2.53225 12.221 2.53225 11.9438C2.53225 11.6777 2.32054 11.5225 1.95792 11.5203C1.58855 11.518 1.3791 11.6622 1.36783 11.9261C1.35432 12.1966 1.56153 12.3585 1.92189 12.3629Z" />
-                                        <path
-                                            d="M6.03852 4.91866C6.10834 4.58159 6.1669 4.18686 6.27276 3.80322C6.34033 3.55929 6.26375 3.41293 6.08132 3.26435C5.80654 3.04038 5.53177 2.80975 5.29979 2.54586C5.18492 2.41724 5.08132 2.17331 5.13087 2.03804C5.18267 1.90055 5.4169 1.78302 5.59033 1.74532C5.93717 1.66992 6.29528 1.63444 6.65114 1.61892C6.88988 1.60783 7.00925 1.51691 7.09483 1.30402C7.23447 0.955863 7.38537 0.609923 7.57231 0.286158C7.64889 0.153104 7.83357 -0.00434352 7.9642 9.16175e-05C8.11285 0.00674432 8.31105 0.148669 8.39213 0.286158C8.59258 0.629881 8.72546 1.0113 8.91465 1.36168C8.97321 1.46812 9.12186 1.57013 9.24573 1.59231C9.61961 1.66105 10.0047 1.66549 10.3741 1.74532C10.5475 1.78302 10.7818 1.90277 10.8336 2.04025C10.8831 2.17553 10.7795 2.41946 10.6647 2.54808C10.4237 2.81862 10.1376 3.0559 9.85609 3.28875C9.69168 3.42402 9.63087 3.55264 9.68717 3.76996C9.78402 4.13142 9.8651 4.49954 9.90339 4.87209C9.91916 5.03397 9.86285 5.28899 9.75024 5.35774C9.61735 5.43757 9.3651 5.41318 9.20519 5.34221C8.84934 5.18477 8.52276 4.96079 8.17141 4.79004C8.0678 4.73904 7.89438 4.74125 7.79078 4.79226C7.41916 4.9741 7.0678 5.19585 6.69843 5.38657C6.32907 5.57284 6.016 5.37326 6.03852 4.91866Z" />
-                                        <path
-                                            d="M0.725777 6.07841C0.802353 5.68591 0.87893 5.37766 0.917218 5.06499C0.930732 4.94967 0.883434 4.79444 0.804606 4.71018C0.615416 4.50172 0.367669 4.34206 0.187488 4.12917C0.0793803 4.00055 -0.03098 3.78323 0.00956053 3.64796C0.0478488 3.51491 0.277579 3.34194 0.417218 3.34859C1.27082 3.38407 1.77758 3.01817 1.99605 2.20432C2.02983 2.07792 2.25731 1.91604 2.38569 1.92491C2.53659 1.93156 2.77082 2.08457 2.80461 2.21763C3.01407 3.02704 3.52082 3.37076 4.35866 3.34194C4.50506 3.3375 4.73929 3.51934 4.78884 3.66127C4.83163 3.78545 4.71902 4.04934 4.59515 4.12917C3.91046 4.56825 3.73479 5.1293 4.02082 5.87883C4.07488 6.01854 3.98479 6.30682 3.86316 6.39109C3.7438 6.47536 3.43974 6.46205 3.32262 6.3667C2.68298 5.85222 2.09064 5.88327 1.45776 6.37557C1.34064 6.46649 1.08839 6.46427 0.937488 6.40661C0.822624 6.36005 0.773074 6.15825 0.725777 6.07841Z" />
-                                        <path
-                                            d="M16.0005 3.82313C15.9509 3.89409 15.8946 4.05598 15.782 4.12694C15.1086 4.55493 14.8788 5.10045 15.1851 5.86108C15.2414 6.003 15.1649 6.30459 15.0477 6.37777C14.9104 6.46426 14.6018 6.45539 14.4757 6.35559C13.8608 5.86773 13.291 5.86995 12.6716 6.34672C12.541 6.44873 12.255 6.45982 12.0905 6.39329C11.8428 6.29129 11.8608 6.01852 11.9487 5.80564C12.2369 5.10932 12.0545 4.59041 11.4216 4.17572C11.2775 4.08037 11.1626 3.82978 11.1671 3.6546C11.1739 3.39071 11.4396 3.29979 11.6739 3.31974C12.4959 3.39071 12.9239 2.98933 13.1446 2.24866C13.1874 2.1023 13.4216 1.93376 13.577 1.92268C13.7077 1.91381 13.9419 2.09565 13.9802 2.23314C14.1964 3.01815 14.6829 3.38184 15.5117 3.32861C15.773 3.31309 15.9644 3.45502 16.0005 3.82313Z" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_113_3028">
-                                            <rect width="16" height="18" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                            <span class="text">
-                                Reviews
-                            </span>
-                        </button>
+                      
 
                         <button class="nav-link" id="v-pills-password-tab" data-bs-toggle="pill"
                             data-bs-target="#v-pills-password" type="button" role="tab" aria-controls="v-pills-password"
@@ -1228,7 +1200,7 @@
                        
 
                         <div class="nav-link">
-                            <a href="login.html">
+                            <a href="{{route('login')}}">
                                 <span>
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1256,233 +1228,211 @@
                     <!-- nav-content -->
                     <div class="tab-content nav-content" id="v-pills-tabContent" style="flex: 1 0%;">
 
-                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                            aria-labelledby="v-pills-home-tab" tabindex="0">
-                            <div class="user-profile">
-                                <div class="user-title">
-                                    <p class="paragraph">Hello, Sajjad</p>
-                                    <h5 class="heading">Welcome to your Profile </h5>
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+    aria-labelledby="v-pills-home-tab" tabindex="0">
+    <div class="user-profile">
+        <div class="user-title">
+            <p class="paragraph">Hello, {{ auth()->user()->name }}</p>
+            <h5 class="heading">Welcome to your Profile</h5>
+        </div>
+        <div class="profile-section">
+            <div class="row g-5">
+                <!-- User Profile Section (e.g., orders, completed deliveries) -->
+                <!-- Repeat this for each user stat dynamically -->
+                <div class="col-lg-4 col-sm-6">
+                    <div class="product-wrapper">
+                        <div class="wrapper-img">
+                            <!-- SVG Icon -->
+                        </div>
+                        <div class="wrapper-content">
+                            <p class="paragraph">New Orders</p>
+                            <h3 class="heading">3</h3> <!-- Example: dynamic new orders count -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="product-wrapper">
+                        <div class="wrapper-img">
+                            <!-- SVG Icon -->
+                        </div>
+                        <div class="wrapper-content">
+                            <p class="paragraph">New Orders</p>
+                            <h3 class="heading">3</h3> <!-- Example: dynamic new orders count -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="product-wrapper">
+                        <div class="wrapper-img">
+                            <!-- SVG Icon -->
+                        </div>
+                        <div class="wrapper-content">
+                            <p class="paragraph">New Orders</p>
+                            <h3 class="heading">3</h3> <!-- Example: dynamic new orders count -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more similar blocks as per your UI -->
+
+                <!-- Personal Information Section -->
+                <div class="col-lg-12">
+                    <div class="info-section">
+                        <div class="seller-info">
+                            <h5 class="heading">Personal Information</h5>
+                            <div class="info-list">
+                                <div class="info-title">
+                                    <p>Name:</p>
+                                    <p>Email:</p>
+                                    <p>Phone:</p>
+                                    <p>City:</p>
+                                    <p>Zip:</p>
                                 </div>
-                                <div class="profile-section">
-                                    <div class="row g-5">
-                                        <div class="col-lg-4 col-sm-6">
-                                            <div class="product-wrapper">
-                                                <div class="wrapper-img">
-                                                    <span>
-                                                        <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <rect width="62" height="62" rx="4" />
-                                                            <path
-                                                                d="M45.4473 20.0309C45.482 20.3788 45.5 20.7314 45.5 21.0883C45.5 26.919 40.7564 31.6625 34.9258 31.6625C29.0951 31.6625 24.3516 26.919 24.3516 21.0883C24.3516 20.7314 24.3695 20.3788 24.4042 20.0309H21.9805L21.0554 12.6289H13.7773V14.7438H19.1884L21.5676 33.7774H47.1868L48.8039 20.0309H45.4473Z" />
-                                                            <path
-                                                                d="M22.0967 38.0074H19.0648C17.3157 38.0074 15.8926 39.4305 15.8926 41.1797C15.8926 42.9289 17.3157 44.352 19.0648 44.352H19.2467C19.1293 44.6829 19.0648 45.0386 19.0648 45.4094C19.0648 47.1586 20.4879 48.5816 22.2371 48.5816C24.4247 48.5816 25.9571 46.4091 25.2274 44.352H35.1081C34.377 46.413 35.9157 48.5816 38.0985 48.5816C39.8476 48.5816 41.2707 47.1586 41.2707 45.4094C41.2707 45.0386 41.2061 44.6829 41.0888 44.352H43.3856V42.2371H19.0648C18.4818 42.2371 18.0074 41.7628 18.0074 41.1797C18.0074 40.5966 18.4818 40.1223 19.0648 40.1223H46.4407L46.9384 35.8926H21.8323L22.0967 38.0074Z" />
-                                                            <path
-                                                                d="M34.9262 29.5477C39.5907 29.5477 43.3856 25.7528 43.3856 21.0883C43.3856 16.4238 39.5907 12.6289 34.9262 12.6289C30.2616 12.6289 26.4668 16.4238 26.4668 21.0883C26.4668 25.7528 30.2617 29.5477 34.9262 29.5477ZM33.8688 17.916H35.9836V20.6503L37.7886 22.4554L36.2932 23.9508L33.8687 21.5262V17.916H33.8688Z" />
-                                                        </svg>
-                                                    </span>
-                                                </div>
-                                                <div class="wrapper-content">
-                                                    <p class="paragraph">New Orders</p>
-                                                    <h3 class="heading">656</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6">
-                                            <div class="product-wrapper">
-                                                <div class="wrapper-img">
-                                                    <span>
-                                                        <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <rect width="62" height="62" rx="4" fill="white" />
-                                                            <path
-                                                                d="M45.2253 29.8816H44.4827L43.6701 26.3651C43.376 25.1043 42.2552 24.2217 40.9662 24.2217H36.8474V20.8453C36.8474 19.038 35.3764 17.5811 33.5831 17.5811H18.1724C16.4631 17.5811 15.0762 18.968 15.0762 20.6772V37.0967C15.0762 38.8058 16.4631 40.1928 18.1724 40.1928H19.2931C19.8955 42.1962 21.7448 43.6533 23.9304 43.6533C26.1159 43.6533 27.9792 42.1962 28.5816 40.1928C28.8455 40.1928 35.3459 40.1928 35.1942 40.1928C35.7966 42.1962 37.6459 43.6533 39.8315 43.6533C42.031 43.6533 43.8803 42.1962 44.4827 40.1928H45.2253C46.7663 40.1928 47.9992 38.9599 47.9992 37.4189V32.6555C47.9992 31.1145 46.7663 29.8816 45.2253 29.8816ZM23.9304 40.8513C22.7897 40.8513 21.8849 39.8969 21.8849 38.7918C21.8849 37.657 22.7956 36.7324 23.9304 36.7324C25.0652 36.7324 25.9898 37.657 25.9898 38.7918C25.9898 39.9151 25.0692 40.8513 23.9304 40.8513ZM28.9739 25.0622L24.799 28.3125C24.2023 28.7767 23.3035 28.6903 22.8236 28.0604L21.2125 25.9449C20.7361 25.3284 20.8622 24.4458 21.4787 23.9835C22.0811 23.5072 22.9637 23.6332 23.4401 24.2496L24.1966 25.2303L27.2507 22.8487C27.8531 22.3864 28.7357 22.4845 29.2121 23.1009C29.6884 23.7173 29.5763 24.586 28.9739 25.0622ZM39.8315 40.8513C38.6906 40.8513 37.7861 39.8969 37.7861 38.7918C37.7861 37.657 38.7107 36.7324 39.8315 36.7324C40.9662 36.7324 41.8909 37.657 41.8909 38.7918C41.8909 39.9166 40.9683 40.8513 39.8315 40.8513ZM37.618 27.0236H40.2798C40.6021 27.0236 40.8962 27.2337 41.0083 27.542L41.8629 30.0497C42.031 30.5541 41.6667 31.0724 41.1344 31.0724H37.618C37.1976 31.0724 36.8474 30.7222 36.8474 30.3019V27.7942C36.8474 27.3739 37.1976 27.0236 37.618 27.0236Z"
-                                                                fill="#FFBB38" />
-                                                        </svg>
-
-                                                    </span>
-                                                </div>
-                                                <div class="wrapper-content">
-                                                    <p class="paragraph">Delivery Completed</p>
-                                                    <h3 class="heading">99783</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-sm-6">
-                                            <div class="product-wrapper">
-                                                <div class="wrapper-img">
-                                                    <span>
-                                                        <svg width="62" height="62" viewBox="0 0 62 62" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <rect width="62" height="62" rx="4" fill="white" />
-                                                            <path
-                                                                d="M26.7975 34.4331C23.7162 36.0289 22.9563 36.8019 21.6486 39.6816C20.7665 38.8387 19.9011 38.0123 19.0095 37.1599C19.5288 36.3146 20.0327 35.4942 20.5353 34.6726C20.8803 34.1071 20.4607 33.0579 19.8228 32.899C18.8862 32.6666 17.9484 32.4426 17 32.2114C17 30.4034 17 28.6274 17 26.7827C17.9212 26.561 18.8542 26.3405 19.7849 26.1117C20.4678 25.9433 20.8922 24.9048 20.527 24.306C20.0339 23.4987 19.5371 22.6925 19.0605 21.916C20.3551 20.6201 21.6225 19.354 22.9243 18.0534C23.7067 18.5335 24.5283 19.0398 25.3535 19.5425C25.887 19.8673 26.9433 19.4452 27.0927 18.8442C27.3262 17.9064 27.5491 16.965 27.7839 16C29.5883 16 31.3785 16 33.2197 16C33.4366 16.907 33.6548 17.8234 33.8777 18.7386C34.0555 19.4678 35.0763 19.8969 35.7082 19.5093C36.5144 19.0149 37.3182 18.5205 38.0829 18.051C39.3763 19.3445 40.6318 20.6 41.943 21.9124C41.4783 22.6723 40.9756 23.4904 40.4753 24.3108C40.1114 24.9071 40.5405 25.9398 41.2258 26.1081C42.1434 26.3334 43.0646 26.5503 44 26.7756C44 28.5954 44 30.3892 44 32.2197C43.1298 32.426 42.2667 32.6287 41.4048 32.8338C40.4658 33.0579 40.0651 34.0122 40.5654 34.8267C41.029 35.5819 41.4914 36.3383 41.9727 37.122C41.1487 38.004 40.3473 38.8612 39.4901 39.7776C38.5393 37.1741 36.8297 35.4243 34.3163 34.4592C37.5565 31.5332 36.8558 27.4668 34.659 25.411C32.2973 23.1999 28.5995 23.2616 26.3138 25.5639C24.1537 27.7406 23.7186 31.6885 26.7975 34.4331Z"
-                                                                fill="#FFBB38" />
-                                                            <path
-                                                                d="M38.0695 46.3142C33.0415 46.3142 28.0847 46.3142 23.0389 46.3142C23.0389 45.9763 23.0342 45.6491 23.0401 45.3219C23.0626 44.0391 22.9796 42.7421 23.1361 41.4747C23.5357 38.2571 26.1261 35.9239 29.3722 35.8208C30.5886 35.7817 31.8417 35.7757 33.0249 36.0164C35.8643 36.595 37.8916 39.0254 38.0552 41.9359C38.1359 43.3704 38.0695 44.8133 38.0695 46.3142Z"
-                                                                fill="#FFBB38" />
-                                                            <path
-                                                                d="M30.5375 33.9233C28.2244 33.9091 26.3501 32.011 26.3832 29.7193C26.4176 27.4122 28.3169 25.5568 30.6157 25.584C32.8849 25.6101 34.7486 27.5011 34.7403 29.7691C34.7332 32.075 32.8481 33.9375 30.5375 33.9233Z"
-                                                                fill="#FFBB38" />
-                                                        </svg>
-
-                                                    </span>
-                                                </div>
-                                                <div class="wrapper-content">
-                                                    <p class="paragraph">Support Tickets</p>
-                                                    <h3 class="heading">09</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="info-section">
-                                                <div class="seller-info">
-                                                    <h5 class="heading">Personal Information</h5>
-                                                    <div class="info-list">
-                                                        <div class="info-title">
-                                                            <p>Name:</p>
-                                                            <p>Email:</p>
-                                                            <p>Phone:</p>
-                                                            <p>City:</p>
-                                                            <p>Zip:</p>
-                                                        </div>
-                                                        <div class="info-details">
-                                                            <p>Sajjad</p>
-                                                            <p>demoemail@gmail.com</p>
-                                                            <p>023 434 54354</p>
-                                                            <p>Haydarabad, Rord 34</p>
-                                                            <p>3454</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="devider"></div>
-                                                <div class="shop-info">
-                                                    <h5 class="heading">Shop Information</h5>
-                                                    <div class="info-list">
-                                                        <div class="info-title">
-                                                            <p>Name:</p>
-                                                            <p>Email:</p>
-                                                            <p>Phone:</p>
-                                                            <p>City:</p>
-                                                            <p>Zip:</p>
-                                                        </div>
-                                                        <div class="info-details">
-                                                            <p>ShopUs Super-Shop</p>
-                                                            <p>demoemail@gmail.com</p>
-                                                            <p>023 434 54354</p>
-                                                            <p>Haydarabad, Rord 34</p>
-                                                            <p>3454</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="info-details">
+                                    <p>{{ auth()->user()->name }}</p>
+                                    <p>{{ auth()->user()->email }}</p>
+                                    <p>{{ auth()->user()->phone ?? 'N/A' }}</p> <!-- Example for missing phone -->
+                                    <p>{{ auth()->user()->city ?? 'N/A' }}</p> <!-- Example for missing city -->
+                                    <p>{{ auth()->user()->zip ?? 'N/A' }}</p> <!-- Example for missing zip -->
                                 </div>
                             </div>
                         </div>
+                        <div class="devider"></div>
+                        <!-- Shop Info (if user has a shop, create a relationship model for it) -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                            aria-labelledby="v-pills-profile-tab" tabindex="0">
-                            <div class="seller-application-section">
-                                <div class="row ">
-                                    <div class="col-lg-7">
-                                        <div class=" account-section">
-                                            <div class="review-form">
-                                                <div class=" account-inner-form">
-                                                    <div class="review-form-name">
-                                                        <label for="firname" class="form-label">First Name*</label>
-                                                        <input type="text" id="firname" class="form-control"
-                                                            placeholder="First Name">
-                                                    </div>
-                                                    <div class="review-form-name">
-                                                        <label for="latname" class="form-label">Last Name*</label>
-                                                        <input type="text" id="latname" class="form-control"
-                                                            placeholder="Last Name">
-                                                    </div>
-                                                </div>
-                                                <div class=" account-inner-form">
-                                                    <div class="review-form-name">
-                                                        <label for="gmail" class="form-label">Email*</label>
-                                                        <input type="email" id="gmail" class="form-control"
-                                                            placeholder="user@gmail.com">
-                                                    </div>
-                                                    <div class="review-form-name">
-                                                        <label for="telephone" class="form-label">Phone*</label>
-                                                        <input type="tel" id="telephone" class="form-control"
-                                                            placeholder="+880388**0899">
-                                                    </div>
-                                                </div>
-                                                <div class="review-form-name">
-                                                    <label for="region" class="form-label">Country*</label>
-                                                    <select id="region" class="form-select">
-                                                        <option>Choose...</option>
-                                                        <option>Bangladesh</option>
-                                                        <option>United States</option>
-                                                        <option>United Kingdom</option>
-                                                    </select>
-                                                </div>
-                                                <div class="review-form-name address-form">
-                                                    <label for="addres" class="form-label">Address*</label>
-                                                    <input type="text" id="addres" class="form-control"
-                                                        placeholder="Enter your Address">
-                                                </div>
-                                                <div class=" account-inner-form city-inner-form">
-                                                    <div class="review-form-name">
-                                                        <label for="teritory" class="form-label">Town / City*</label>
-                                                        <select id="teritory" class="form-select">
-                                                            <option>Choose...</option>
-                                                            <option>Newyork</option>
-                                                            <option>Dhaka</option>
-                                                            <option selected>London</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="review-form-name">
-                                                        <label for="post" class="form-label">Postcode / ZIP*</label>
-                                                        <input type="number" id="post" class="form-control"
-                                                            placeholder="0000">
-                                                    </div>
-                                                </div>
-                                                <div class="submit-btn">
-                                                    <a href="#" class="shop-btn cancel-btn">Cancel</a>
-                                                    <a href="#" class="shop-btn update-btn">Update Profile</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="img-upload-section">
-                                            <div class="logo-wrapper">
-                                                <h5 class="comment-title">Update Logo</h5>
-                                                <p class="paragraph">Size300x300. Gifs work
-                                                    too.Max 5mb.</p>
-                                                <div class="logo-upload">
-                                                    <img src="assets/images/homepage-one/sallers-cover.png" alt="upload"
-                                                        class="upload-img" id="upload-img">
-                                                    <div class="upload-input">
-                                                        <label for="input-file">
-                                                            <span>
-                                                                <svg width="32" height="32" viewBox="0 0 32 32"
-                                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M16.5147 11.5C17.7284 12.7137 18.9234 13.9087 20.1296 15.115C19.9798 15.2611 19.8187 15.4109 19.6651 15.5683C17.4699 17.7635 15.271 19.9587 13.0758 22.1539C12.9334 22.2962 12.7948 22.4386 12.6524 22.5735C12.6187 22.6034 12.5663 22.6296 12.5213 22.6296C11.3788 22.6334 10.2362 22.6297 9.09365 22.6334C9.01498 22.6334 9 22.6034 9 22.536C9 21.4009 9 20.2621 9.00375 19.1271C9.00375 19.0746 9.02997 19.0109 9.06368 18.9772C10.4123 17.6249 11.7609 16.2763 13.1095 14.9277C14.2295 13.8076 15.3459 12.6913 16.466 11.5712C16.4884 11.5487 16.4997 11.5187 16.5147 11.5Z"
-                                                                        fill="white"></path>
-                                                                    <path
-                                                                        d="M20.9499 14.2904C19.7436 13.0842 18.5449 11.8854 17.3499 10.6904C17.5634 10.4694 17.7844 10.2446 18.0054 10.0199C18.2639 9.76139 18.5261 9.50291 18.7884 9.24443C19.118 8.91852 19.5713 8.91852 19.8972 9.24443C20.7251 10.0611 21.5492 10.8815 22.3771 11.6981C22.6993 12.0165 22.7105 12.4698 22.3996 12.792C21.9238 13.2865 21.4443 13.7772 20.9686 14.2717C20.9648 14.2792 20.9536 14.2867 20.9499 14.2904Z"
-                                                                        fill="white"></path>
-                                                                </svg>
-                                                            </span>
-                                                        </label>
-                                                        <input type="file"
-                                                            accept="image/jpeg, image/jpg, image/png, image/webp"
-                                                            id="input-file">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
+<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+    <div class="seller-application-section">
+        <div class="row ">
+            <div class="col-lg-7">
+            @if(session('success'))
+    <div class="alert alert-success" role="alert">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger" role="alert">
+        {{ session('error') }}
+    </div>
+@endif
+<form method="POST" action="{{ route('profile.update') }}">
+    @csrf
+    @method('PATCH')
+    <div class="account-section">
+        <div class="review-form">
+            <div class="account-inner-form">
+                <div class="review-form-name">
+                    <label for="firname" class="form-label">First Name*</label>
+                    <input type="text" id="firname" name="first_name" class="form-control" value="{{ old('first_name', auth()->user()->first_name) }}" placeholder="First Name">
+                    @error('first_name')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="review-form-name">
+                    <label for="latname" class="form-label">Last Name*</label>
+                    <input type="text" id="latname" name="last_name" class="form-control" value="{{ old('last_name', auth()->user()->last_name) }}" placeholder="Last Name">
+                    @error('last_name')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+            <div class="account-inner-form">
+                <div class="review-form-name">
+                    <label for="gmail" class="form-label">Email*</label>
+                    <input type="email" id="gmail" name="email" class="form-control" value="{{ old('email', auth()->user()->email) }}" placeholder="user@gmail.com">
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="review-form-name">
+                    <label for="telephone" class="form-label">Phone*</label>
+                    <input type="tel" id="telephone" name="phone" class="form-control" value="{{ old('phone', auth()->user()->phone) }}" placeholder="+880388**0899">
+                    @error('phone')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+            <div class="review-form-name">
+                <label for="region" class="form-label">Country*</label>
+                <select id="region" name="country" class="form-select">
+                    <option value="Bangladesh" {{ old('country', auth()->user()->country) == 'Bangladesh' ? 'selected' : '' }}>Bangladesh</option>
+                    <option value="United States" {{ old('country', auth()->user()->country) == 'United States' ? 'selected' : '' }}>United States</option>
+                    <option value="United Kingdom" {{ old('country', auth()->user()->country) == 'United Kingdom' ? 'selected' : '' }}>United Kingdom</option>
+                </select>
+                @error('country')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="review-form-name address-form">
+                <label for="addres" class="form-label">Address*</label>
+                <input type="text" id="addres" name="address" class="form-control" value="{{ old('address', auth()->user()->address) }}" placeholder="Enter your Address">
+                @error('address')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="account-inner-form city-inner-form">
+                <div class="review-form-name">
+                    <label for="teritory" class="form-label">Town / City*</label>
+                    <select id="teritory" name="city" class="form-select">
+                        <option value="New York" {{ old('city', auth()->user()->city) == 'New York' ? 'selected' : '' }}>New York</option>
+                        <option value="Dhaka" {{ old('city', auth()->user()->city) == 'Dhaka' ? 'selected' : '' }}>Dhaka</option>
+                        <option value="London" {{ old('city', auth()->user()->city) == 'London' ? 'selected' : '' }}>London</option>
+                    </select>
+                    @error('city')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="review-form-name">
+                    <label for="post" class="form-label">Postcode / ZIP*</label>
+                    <input type="number" id="post" name="postcode" class="form-control" value="{{ old('postcode', auth()->user()->postcode) }}" placeholder="0000">
+                    @error('postcode')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+            <div class="submit-btn">
+                <button type="submit" class="shop-btn update-btn">Update Profile</button>
+                <a href="#" class="shop-btn cancel-btn">Cancel</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+            </div>
+            <div class="col-lg-5">
+                <div class="img-upload-section">
+                    <div class="logo-wrapper">
+                        <h5 class="comment-title">Update Logo</h5>
+                        <p class="paragraph">Size 300x300. Gifs work too. Max 5mb.</p>
+                        <div class="logo-upload">
+                            <img src="{{ auth()->user()->logo_url ?? 'assets/images/homepage-one/sallers-cover.png' }}" alt="upload" class="upload-img" id="upload-img">
+                            <div class="upload-input">
+                                <label for="input-file">
+                                    <span>
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16.5147 11.5C17.7284 12.7137 18.9234 13.9087 20.1296 15.115C19.9798 15.2611 19.8187 15.4109 19.6651 15.5683C17.4699 17.7635 15.271 19.9587 13.0758 22.1539C12.9334 22.2962 12.7948 22.4386 12.6524 22.5735C12.6187 22.6034 12.5663 22.6296 12.5213 22.6296C11.3788 22.6334 10.2362 22.6297 9.09365 22.6334C9.01498 22.6334 9 22.6034 9 22.536C9 21.4009 9 20.2621 9.00375 19.1271C9.00375 19.0746 9.02997 19.0109 9.06368 18.9772C10.4123 17.6249 11.7609 16.2763 13.1095 14.9277C14.2295 13.8076 15.3459 12.6913 16.466 11.5712C16.4884 11.5487 16.4997 11.5187 16.5147 11.5Z" fill="white"></path>
+                                            <path d="M20.9499 14.2904C19.7436 13.0842 18.5449 11.8854 17.3499 10.6904C17.5634 10.4694 17.7844 10.2446 18.0054 10.0199C18.2639 9.76139 18.5261 9.50291 18.7884 9.24443C19.118 8.91852 19.5713 8.91852 19.8972 9.24443C20.7251 10.0611 21.5492 10.8815 22.3771 11.6981C22.6993 12.0165 22.7105 12.4698 22.3996 12.792C21.9238 13.2865 21.4443 13.7772 20.9686 14.2717C20.9648 14.2792 20.9536 14.2867 20.9499 14.2904Z" fill="white"></path>
+                                        </svg>
+                                    </span>
+                                </label>
+                                <input type="file" accept="image/jpeg, image/jpg, image/png, image/webp" id="input-file">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
                         <div class="tab-pane fade" id="v-pills-payment" role="tabpanel"
                             aria-labelledby="v-pills-order-tab" tabindex="0">
