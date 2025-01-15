@@ -111,27 +111,29 @@
     </section>
     <!--------------- style-section-end --------------->
 
-    <!--------------- category-section--------------->
     <section class="product-category">
     <div class="container">
         <div class="section-title">
             <h5>Our Categories</h5>
             <a href="product-sidebar.html" class="view">View All</a>
         </div>
-        <div class="category-section">
+        <div class="category-section row">
             @foreach($categories as $category)
-                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="{{ $loop->iteration * 100 }}">
+                <div class="col-lg-4 col-md-6 col-sm-12 product-wrapper" data-aos="fade-right" data-aos-duration="{{ $loop->iteration * 100 }}">
                     <div class="wrapper-img">
-                        <img src="{{ Storage::url($category->image) }}" alt="no img">
+                        <img src="{{ Storage::url($category->image) }}" alt="no img" class="img-fluid">
                     </div>
                     <div class="wrapper-info">
-                        <a href="product-sidebar.html" class="wrapper-details">{{ $category->slug }}</a>
+                        <!-- Displaying category slug here -->
+                        <a href="p" class="wrapper-details">{{ $category->name }}</a>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
 </section>
+
+
     <!--------------- brand-section--------------->
     <section class="product brand" data-aos="fade-up">
         <div class="container">
@@ -709,7 +711,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="product-wrapper" data-aos="fade-right">
                             <div class="product-img">
-                                <img src="{{ asset('assets/images/products/' . $product->image) }}"
+                                <img src="{{ Storage::url($product->image) }}"
                                     alt="{{$product->name}}">
                                 <div class="product-cart-items">
                                     <a href="#" class="cart cart-item">
