@@ -12,7 +12,82 @@
 
     <!--title  -->
     <title>{{ config('app.name', 'Laravel') }}</title>
+<style>
+/* Apply to the section as a whole */
+#hero {
+    height: 100vh; /* Full height section */
+    position: relative;
+    overflow: hidden;
+}
 
+/* Styling for the swiper slides */
+.hero-slider-one {
+    height: 600%; /* Full height of section */
+    background-color: #000; /* Fallback color */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: flex-start; /* Align content horizontally */
+}
+
+/* Ensure text is visible */
+.wrapper-info {
+    z-index: 2; /* Keeps text above the background */
+}
+
+.hero .wrapper-info h5,
+.hero .wrapper-info h1,
+.hero .wrapper-info a {
+    color: white; /* Ensures text is legible on background image */
+}
+<style>
+/* Common Wrapper Styles */
+.product-wrapper {
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    background-color: #000; /* Fallback color */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Wrapper Info Styling */
+.wrapper-info {
+    z-index: 2; /* Content above overlay */
+    text-align: center;
+    padding: 20px;
+}
+
+.wrapper-info h4,
+.wrapper-info span,
+.wrapper-info a {
+    color: white; /* Ensures text is readable on the background */
+}
+
+.shop-btn {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.shop-btn:hover {
+    background-color: white;
+}
+
+
+</style>
  <!--------------- swiper-css ---------------->
 <link rel="stylesheet" href="{{ asset('css/swiper10-bundle.min.css') }}">
 

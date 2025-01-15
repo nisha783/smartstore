@@ -14,9 +14,6 @@
                     <div class="col-md-6">
                         <div class="product-info-img" data-aos="fade-right">
                             <div class="swiper product-top">
-                                <div class="product-discount-content">
-                                    <h4>-50%</h4>
-                                </div>
                                 <div class="swiper-wrapper">
             
                                 @foreach ($product->images as $image)

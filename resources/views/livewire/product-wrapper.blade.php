@@ -17,7 +17,7 @@
     <div class="shop-content">
         <div class="d-flex flex-wrap">
             @forelse ($product->categories as $category)
-                <a href="{{ route('category.show', $category->slug) }}">
+                <a href="">
                     <span class="category badge badge-secondary">{{ $category->name }}</span>
                 </a>
             @empty

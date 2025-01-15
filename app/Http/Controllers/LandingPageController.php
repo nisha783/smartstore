@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Faq;
 use App\Models\Product;
+use App\Models\BlogPost;
 use App\Services\CartService;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,9 @@ class LandingPageController extends Controller
         $categories = Category::all();
         $products = Product::all();
         $faqs=Faq::all();
-        return view('landing.index', compact('categories','products','faqs'));
+        $posts = BlogPost::with('category')->get();
+    
+        return view('landing.index', compact('categories','products','faqs','posts'));
     }
 
     /**
