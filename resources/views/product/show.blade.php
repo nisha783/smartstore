@@ -17,7 +17,7 @@
                                 <div class="product-discount-content">
                                     <h4>-50%</h4>
                                 </div>
-                                <div class="swiper-wrapper">
+                                <div class="swiper-wrapper ms-4">
             
                                 @foreach ($product->images as $image)
                                     <div class="swiper-slide slider-top-img">
