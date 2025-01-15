@@ -706,7 +706,7 @@
                 <a href="product-sidebar.html" class="view">View All</a>
             </div>
             <div class="top-selling-section">
-                <div class="row g-5">
+                <div class="row g-5 ms-4">
                     @forelse ($products as $product) 
                     <div class="col-lg-4 col-md-6">
                         <div class="product-wrapper" data-aos="fade-right">

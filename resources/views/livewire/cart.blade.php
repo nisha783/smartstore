@@ -1,8 +1,8 @@
-@extends('layouts.app')
-@section('content')
+
   <!--------------- blog-tittle-section---------------->
-  <section class="blog about-blog">
-        <div class="container">
+  <div>
+      <section class="blog about-blog">
+          <div class="container">
             <div class="blog-bradcrum">
                 <span><a href="index.html">Home</a></span>
                 <span class="devider">/</span>
@@ -244,9 +244,9 @@
             <div class="wishlist-btn cart-btn">
                 <a href="empty-cart.html" class="clean-btn">Clear Cart</a>
                 <a href="#" class="shop-btn update-btn">Update Cart</a>
-                <a href="{{route('checkoute.index')}}" class="shop-btn">Proceed to Checkout</a>
+                <a href="" class="shop-btn">Proceed to Checkout</a>
             </div>
         </div>
     </section>
 
-@endsection
+</div>

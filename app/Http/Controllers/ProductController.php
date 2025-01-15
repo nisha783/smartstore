@@ -38,7 +38,6 @@ class ProductController extends Controller
     {
         //
         $product = Product::where('slug', $product)->firstOrFail();
-    
     return view('product.show', compact('product'));
     }
 
