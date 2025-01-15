@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Faq;
 use App\Models\Product;
+use App\Services\CartService;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -15,6 +16,7 @@ class LandingPageController extends Controller
     public function index()
     {
         //
+        $cart = new CartService();
         $categories = Category::all();
         $products = Product::all();
         $faqs=Faq::all();
