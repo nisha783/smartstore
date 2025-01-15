@@ -8,7 +8,7 @@
     <section id="hero" class="hero">
     <div class="swiper hero-swiper">
         <div class="swiper-wrapper hero-wrapper">
-            <div class="swiper-slide hero-slider-one" style="background-image: url('3.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="swiper-slide hero-slider-one" style="background-image: url('2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                 <div class="container">
                     <div class="col-lg-6">
                         <div class="wrapper-section" data-aos="fade-up">
@@ -177,26 +177,37 @@
             </div>
         </div>
     </section>
-    <section class="product-category">
+    <section class="product-category py-5">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title text-center mb-4">
             <h5>Our Categories</h5>
-            <a href="product-sidebar.html" class="view">View All</a>
+            <a href="product-sidebar.html" class="btn btn-primary view">View All</a>
         </div>
-        <div class="category-section row">
+        <div class="row g-4">
             @foreach($categories as $category)
-                <div class="col-lg-4 col-md-6 col-sm-12 product-wrapper" data-aos="fade-right" data-aos-duration="{{ $loop->iteration * 100 }}">
-                    <div class="wrapper-img">
-                        <img src="{{ Storage::url($category->image) }}" alt="no img" class="img-fluid">
-                    </div>
-                    <div class="wrapper-info">
-                        <a href="p" class="wrapper-details">{{ $category->name }}</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow-sm border-0" data-aos="fade-right" data-aos-duration="{{ $loop->iteration * 100 }}">
+                        <!-- Category Image -->
+                        <div class="card-img-top overflow-hidden">
+                            <img 
+                                src="{{ Storage::url($category->image) }}" 
+                                alt="{{ $category->name }}" 
+                                class="img-fluid rounded"
+                                style="object-fit: cover; height: 250px; width: 100%;">
+                        </div>
+                        <!-- Category Details -->
+                        <div class="card-body text-center">
+                            <a href="p" class="wrapper-details h5 text-decoration-none text-dark fw-bold">
+                                {{ $category->name }}
+                            </a>
+                        </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
 </section>
+
     <!--------------- brand-section-end--------------->
     <section class="product flash-sale">
         <div class="container">
