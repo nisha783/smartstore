@@ -1,5 +1,5 @@
 <div class="shop-item">
-    <div class="shop-thumb">
+    <div class="">
         <div class="overlay"></div>
         @if ($product->images->count())
             <img src="{{ Storage::url($product->images->first()->image) }}" alt="shop">
