@@ -117,7 +117,7 @@
         <div class="container">
             <div class="section-title">
                 <h5>Our Categories</h5>
-                <a href="product-sidebar.html" class="view">View All</a>
+                <a href="{{route('category.index')}}" class="view">View All</a>
             </div>
             <div class="category-section">
                 <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
@@ -220,34 +220,6 @@
         </div>
     </section>
     <!--------------- category-section-end--------------->
-    <section class="product-category py-5">
-    <div class="container">
-        <div class="section-title text-center mb-4">
-        </div>
-        <div class="row g-4">
-            @foreach($categories as $category)
-                <div class="col-lg-4 col-md-6">
-                    <div class="card shadow-sm border-0" data-aos="fade-right" data-aos-duration="{{ $loop->iteration * 100 }}">
-                        <!-- Category Image -->
-                        <div class="card-img-top overflow-hidden">
-                            <img 
-                                src="{{ Storage::url($category->image) }}" 
-                                alt="{{ $category->name }}" 
-                                class="img-fluid rounded"
-                                style="object-fit: cover; height: 250px; width: 100%;">
-                        </div>
-                        <!-- Category Details -->
-                        <div class="card-body text-center">
-                            <a href="p" class="wrapper-details h5 text-decoration-none text-dark fw-bold">
-                                {{ $category->name }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
 
     <!--------------- brand-section-end--------------->
     <section class="product flash-sale">

@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Auth\User\DashboardController;
 use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
@@ -27,6 +28,7 @@ Route::resource('/privacy',PrivacyController::class);
 Route::resource('/term',TermController::class);
 Route::resource('/faq',FaqController::class);
 Route::resource('/checkout',CheckoutController::class);
+Route::resource('/category',CategoryController::class);
 
 Route::name('user.')->prefix('user')->middleware(['auth'])->group(function () {
     Route::resource('/dashboard', DashboardController::class);
