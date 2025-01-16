@@ -46,7 +46,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <a href="{{ route('blog.show', $blogPost->slug) }}" class="about-details wrapper-details">
+                            <a href="{{ route('blog.show', $blogPost->slug) }}" class="about-details wrapper-details text-dark">
                                 {{ \Illuminate\Support\Str::limit($blogPost->title, 60) }}
                             </a>
                             <div class="divider"></div>

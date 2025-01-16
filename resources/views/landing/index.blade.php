@@ -5,184 +5,224 @@
             @yield('content')
         </div>
     </section>
-    <section id="hero" class="hero">
-    <div class="swiper hero-swiper">
-        <div class="swiper-wrapper hero-wrapper">
-            <div class="swiper-slide hero-slider-one" style="background-image: url('2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                <div class="container">
+ <section id="hero" class="hero">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper hero-wrapper">
+                <div class="swiper-slide hero-slider-one">
+                    <div class="container">
+                        <div class="col-lg-6">
+                            <div class="wrapper-section" data-aos="fade-up">
+                                <div class="wrapper-info">
+                                    <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF
+                                    </h5>
+                                    <h1 class="wrapper-details">Fashion Collection
+                                        Summer Sale</h1>
+                                    <a href="product-sidebar.html" class="shop-btn">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slider-two">
+                    <div class="container">
+                        <div class="col-lg-6">
+                            <div class="wrapper-section">
+                                <div class="wrapper-info">
+                                    <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF
+                                    </h5>
+                                    <h1 class="wrapper-details">Fashion Collection
+                                        Summer Sale</h1>
+                                    <a href="#" class="shop-btn">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide hero-slider-three">
+                    <div class="container">
+                        <div class="col-lg-6">
+                            <div class="wrapper-section">
+                                <div class="wrapper-info">
+                                    <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF
+                                    </h5>
+                                    <h1 class="wrapper-details">Fashion Collection
+                                        Summer Sale</h1>
+                                    <a href="#" class="shop-btn">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--------------- hero-section-end --------------->
+
+    <!--------------- style-section --------------->
+    <section class="product fashion-style">
+        <div class="container">
+            <div class="style-section">
+                <div class="row gy-4 gx-5 gy-lg-0">
                     <div class="col-lg-6">
-                        <div class="wrapper-section" data-aos="fade-up">
-                            <div class="wrapper-info text-white">
-                                <h5 class="wrapper-subtitle text-dark mt-5 mb-5">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
-                                <h1 class="wrapper-details text-dark">Fashion Collection Summer Sale</h1>
-                                <a href="product-sidebar.html" class="shop-btn btn btn-light mt-3">Shop Now</a>
+                        <div class="product-wrapper wrapper-one" data-aos="fade-right">
+                            <div class="wrapper-info">
+                                <span class="wrapper-subtitle">NEW STYLE</span>
+                                <h4 class="wrapper-details">Get 65% Offer
+                                    <span class="wrapper-inner-title">& Make New</span> Fusion.
+                                </h4>
+                                <a href="product-sidebar.html" class="shop-btn">Shop Now
+                                    <span>
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632"
+                                                transform="rotate(45 1.45312 0.914062)" />
+                                            <rect x="8" y="7.45703" width="9.25346" height="2.05632"
+                                                transform="rotate(135 8 7.45703)" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="product-wrapper wrapper-two" data-aos="fade-up">
+                            <div class="wrapper-info">
+                                <span class="wrapper-subtitle">Mega OFFER</span>
+                                <h4 class="wrapper-details">
+                                    Make your New
+                                    <span class="wrapper-inner-title">Styles with Our</span>
+                                    Products
+                                </h4>
+                                <a href="product-sidebar.html" class="shop-btn">Shop Now
+                                    <span>
+                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632"
+                                                transform="rotate(45 1.45312 0.914062)" />
+                                            <rect x="8" y="7.45703" width="9.25346" height="2.05632"
+                                                transform="rotate(135 8 7.45703)" />
+                                        </svg>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
+    </section>
 
-
-    <!--------------- style-section-end --------------->
-
-    
-  
-    
-    <!--------------- brand-section--------------->
-    <section class="product brand" data-aos="fade-up">
+    <section class="product-category">
         <div class="container">
             <div class="section-title">
-                <h5>Brand of Prodcuts</h5>
+                <h5>Our Categories</h5>
                 <a href="product-sidebar.html" class="view">View All</a>
             </div>
-            <div class="brand-section">
-                <div class="product-wrapper">
+            <div class="category-section">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-1.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/dresses.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Dresses</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="200">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-2.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/bags.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Leather Bags</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="300">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-3.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/sweaters.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Sweaters</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="400">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-4.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/shoes.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Boots</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="500">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-5.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/gift.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Gift for Him</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="600">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-6.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/sneakers.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Sneakers</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-7.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/watch.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Watch</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="200">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-8.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/ring.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Gold Rings</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="300">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-9.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/cap.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Cap</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="400">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-10.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/glass.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Sunglass</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="500">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-11.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/baby.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Baby Shop</a>
                     </div>
                 </div>
-                <div class="product-wrapper">
+                <div class="product-wrapper" data-aos="fade-right" data-aos-duration="200">
                     <div class="wrapper-img">
-                        <a href="product-sidebar.html">
-                            <img src="./assets/images/homepage-one/brand-img-12.webp" alt="img">
-                        </a>
+                        <img src="./assets/images/homepage-one/category-img/bags.webp" alt="dress">
+                    </div>
+                    <div class="wrapper-info">
+                        <a href="product-sidebar.html" class="wrapper-details">Leather Bags</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="product fashion-style">
-        <div class="container">
-            <div class="style-section">
-                <div class="row gy-4 gx-5 gy-lg-0">
-                <div class="col-lg-6">
-    <div class="product-wrapper wrapper-one position-relative text-white" data-aos="fade-right" style="background-image: url('21146.jpg'); background-size: cover; background-position: center;">
-        <!-- Overlay -->
-        <div class="overlay position-absolute w-100 h-100"></div>
-        <div class="wrapper-info position-relative">
-            <span class="wrapper-subtitle">NEW STYLE</span>
-            <h4 class="wrapper-details">Get 65% Offer
-                <span class="wrapper-inner-title">& Make New</span> Fusion.
-            </h4>
-            <a href="product-sidebar.html" class="shop-btn">Shop Now
-                <span>
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632" transform="rotate(45 1.45312 0.914062)" />
-                        <rect x="8" y="7.45703" width="9.25346" height="2.05632" transform="rotate(135 8 7.45703)" />
-                    </svg>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
-<div class="col-lg-6">
-    <div class="product-wrapper wrapper-two position-relative text-white" data-aos="fade-up" style="background-image: url('3.webp'); background-size: cover; background-position: center;">
-        <!-- Overlay -->
-        <div class="overlay position-absolute w-100 h-100"></div>
-        <div class="wrapper-info position-relative">
-            <span class="wrapper-subtitle">Mega OFFER</span>
-            <h4 class="wrapper-details">
-                Make your New
-                <span class="wrapper-inner-title">Styles with Our</span>
-                Products
-            </h4>
-            <a href="product-sidebar.html" class="shop-btn">Shop Now
-                <span>
-                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632" transform="rotate(45 1.45312 0.914062)" />
-                        <rect x="8" y="7.45703" width="9.25346" height="2.05632" transform="rotate(135 8 7.45703)" />
-                    </svg>
-                </span>
-            </a>
-        </div>
-    </div>
-</div>
-                    
-                </div>
-            </div>
-        </div>
-    </section>
+    <!--------------- category-section-end--------------->
     <section class="product-category py-5">
     <div class="container">
         <div class="section-title text-center mb-4">
-            <h5>Our Categories</h5>
-            <a href="product-sidebar.html" class="btn btn-primary view">View All</a>
         </div>
         <div class="row g-4">
             @foreach($categories as $category)
