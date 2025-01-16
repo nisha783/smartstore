@@ -19,11 +19,11 @@ class LandingPageController extends Controller
         //
         $cart = new CartService();
         $categories = Category::all();
-        $products = Product::all();
-        $faqs=Faq::all();
+        $products = Product::with('images')->get();
+        $faqs = Faq::all();
         $posts = BlogPost::with('category')->get();
-    
-        return view('landing.index', compact('categories','products','faqs','posts'));
+
+        return view('landing.index', compact('categories', 'products', 'faqs', 'posts'));
     }
 
     /**

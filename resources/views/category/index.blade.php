@@ -4,6 +4,10 @@
     <div class="container mt-5" style="margin-bottom:100px; margin-top:100px;">
         <div class="section-title text-center mb-4">
             <h4>Our Category</h4>
+            <div class="section-heading mb-0">
+                    <p>{{ Number::format($categories->count()) }} categories belonging to a total
+                        {{ Number::format($categories->count()) }} products</p>
+                </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
