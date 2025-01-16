@@ -8,51 +8,50 @@
  <section id="hero" class="hero">
         <div class="swiper hero-swiper">
             <div class="swiper-wrapper hero-wrapper">
-                <div class="swiper-slide hero-slider-one">
-                    <div class="container">
-                        <div class="col-lg-6">
-                            <div class="wrapper-section" data-aos="fade-up">
-                                <div class="wrapper-info">
-                                    <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF
-                                    </h5>
-                                    <h1 class="wrapper-details">Fashion Collection
-                                        Summer Sale</h1>
-                                    <a href="product-sidebar.html" class="shop-btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="swiper-slide" style="background-image: url('{{ asset('hero-slider-one.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="col-lg-6">
+            <div class="wrapper-section" data-aos="fade-up">
+                <div class="wrapper-info">
+                    <h5 class="wrapper-subtitle text-dark">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
+                    <h2 class="wrapper-details text-dark">Fashion Collection
+                        Summer Sale</h2>
+                    <a href="product-sidebar.html" class="shop-btn">Shop Now</a>
                 </div>
-                <div class="swiper-slide hero-slider-two">
-                    <div class="container">
-                        <div class="col-lg-6">
-                            <div class="wrapper-section">
-                                <div class="wrapper-info">
-                                    <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF
-                                    </h5>
-                                    <h1 class="wrapper-details">Fashion Collection
-                                        Summer Sale</h1>
-                                    <a href="#" class="shop-btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide" style="background-image: url('{{ asset('hero-slider-two.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="col-lg-6">
+            <div class="wrapper-section">
+                <div class="wrapper-info">
+                    <h5 class="wrapper-subtitle text-dark">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
+                    <h2 class="wrapper-details text-dark">Fashion Collection
+                        Summer Sale</h2>
+                    <a href="#" class="shop-btn">Shop Now</a>
                 </div>
-                <div class="swiper-slide hero-slider-three">
-                    <div class="container">
-                        <div class="col-lg-6">
-                            <div class="wrapper-section">
-                                <div class="wrapper-info">
-                                    <h5 class="wrapper-subtitle">UP TO <span class="wrapper-inner-title">70%</span> OFF
-                                    </h5>
-                                    <h1 class="wrapper-details">Fashion Collection
-                                        Summer Sale</h1>
-                                    <a href="#" class="shop-btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="swiper-slide" style="background-image: url('{{ asset('hero-slider-three.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="col-lg-6">
+            <div class="wrapper-section">
+                <div class="wrapper-info">
+                    <h5 class="wrapper-subtitle text-dark">UP TO <span class="wrapper-inner-title">70%</span> OFF</h5>
+                    <h2 class="wrapper-details text-dark">Fashion Collection
+                        Summer Sale</h2>
+                    <a href="#" class="shop-btn">Shop Now</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -61,57 +60,63 @@
 
     <!--------------- style-section --------------->
     <section class="product fashion-style">
-        <div class="container">
-            <div class="style-section">
-                <div class="row gy-4 gx-5 gy-lg-0">
-                    <div class="col-lg-6">
-                        <div class="product-wrapper wrapper-one" data-aos="fade-right">
-                            <div class="wrapper-info">
-                                <span class="wrapper-subtitle">NEW STYLE</span>
-                                <h4 class="wrapper-details">Get 65% Offer
-                                    <span class="wrapper-inner-title">& Make New</span> Fusion.
-                                </h4>
-                                <a href="product-sidebar.html" class="shop-btn">Shop Now
-                                    <span>
-                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632"
-                                                transform="rotate(45 1.45312 0.914062)" />
-                                            <rect x="8" y="7.45703" width="9.25346" height="2.05632"
-                                                transform="rotate(135 8 7.45703)" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
+    <div class="container">
+        <div class="style-section">
+            <div class="row gy-4 gx-5 gy-lg-0">
+                <!-- First Column -->
+                <div class="col-lg-6">
+                    <div class="product-wrapper wrapper-two" data-aos="fade-up" style="background-image: url('{{ asset('syle-bg-one.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="">
+                            <span class="wrapper-subtitle">Mega OFFER</span>
+                            <h4 class="wrapper-details">
+                                Make your New
+                                <span class="wrapper-inner-title">Styles with Our</span>
+                                Products
+                            </h4>
+                            <a href="product-sidebar.html" class="shop-btn">Shop Now
+                                <span>
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632"
+                                            transform="rotate(45 1.45312 0.914062)" />
+                                        <rect x="8" y="7.45703" width="9.25346" height="2.05632"
+                                            transform="rotate(135 8 7.45703)" />
+                                    </svg>
+                                </span>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="product-wrapper wrapper-two" data-aos="fade-up">
-                            <div class="wrapper-info">
-                                <span class="wrapper-subtitle">Mega OFFER</span>
-                                <h4 class="wrapper-details">
-                                    Make your New
-                                    <span class="wrapper-inner-title">Styles with Our</span>
-                                    Products
-                                </h4>
-                                <a href="product-sidebar.html" class="shop-btn">Shop Now
-                                    <span>
-                                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632"
-                                                transform="rotate(45 1.45312 0.914062)" />
-                                            <rect x="8" y="7.45703" width="9.25346" height="2.05632"
-                                                transform="rotate(135 8 7.45703)" />
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
+                </div>
+                
+                <!-- Second Column -->
+                <div class="col-lg-6">
+                    <div class="product-wrapper wrapper-two" data-aos="fade-up" style="background-image: url('{{ asset('style-bg-two.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="">
+                            <span class="wrapper-subtitle">Mega OFFER</span>
+                            <h4 class="wrapper-details">
+                                Make your New
+                                <span class="wrapper-inner-title">Styles with Our</span>
+                                Products
+                            </h4>
+                            <a href="product-sidebar.html" class="shop-btn">Shop Now
+                                <span>
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.45312" y="0.914062" width="9.25346" height="2.05632"
+                                            transform="rotate(45 1.45312 0.914062)" />
+                                        <rect x="8" y="7.45703" width="9.25346" height="2.05632"
+                                            transform="rotate(135 8 7.45703)" />
+                                    </svg>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section class="product-category">
         <div class="container">

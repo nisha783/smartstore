@@ -23,7 +23,7 @@
                 <div class="row align-items-center gy-5">
                     <div class="col-lg-6">
                         <div class="about-img" data-aos="fade-right">
-                            <img src="4.jpg" alt="img" height="500px" width="800px">
+                            <img src="style-bg-three.webp" alt="img" height="500px" width="800px">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -77,7 +77,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="contact-us.html" class="shop-btn">
+                            <a href="{{route('contact.index')}}" class="shop-btn">
                                 Contact us
                                 <span>
                                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
