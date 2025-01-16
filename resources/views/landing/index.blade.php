@@ -227,11 +227,12 @@
             <div class="flash-sale-section">
                 <h4 class="">Best Sale Product</h4>
                 <div class="row g-5">
-                @foreach ($products as $product)
+                    @foreach ($products as $product)
+                @foreach ($product->images as $image)
                     <div class="col-lg-3 col-md-6">
                         <div class="product-wrapper" data-aos="fade-right" data-aos-duration="100">
                             <div class="product-img">
-                                <img src="{{ Storage::url($product->image) }}"
+                                <img src="{{ Storage::url($image->image) }}"
                                     alt="product-img">
                                 <div class="product-cart-items">
                                     <a href="#" class="cart cart-item">
@@ -337,23 +338,12 @@
                         </div>
                     </div>
             @endforeach
+            @endforeach
                 </div>
             </div>
         </div>
     </section>
-    <section class="fashion-section pb-100">
-        <div class="container">
-            <div class="shop-carousel">
-                <div class="row g-3">
-                    @foreach ($products as $product)
-                        <div class="col-md-3">
-                            @livewire('product-wrapper', ['product' => $product])
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
+ 
   
     <!--------------- top-sell-section-end--------------->
     <section class="blog about-blog">
