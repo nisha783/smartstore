@@ -328,7 +328,7 @@
                                     </span>
                                 </div>
                                 <div class="product-description">
-                                    <a href="{{ route('product.show', $product->slug) }}" class="product-details">{{ $product->description }}</a>
+                                    <a href="{{ route('product.show', $product->slug) }}" class="product-details">{{ $product->slug }}</a>
                                     <div class="price">
                                         <span class="price-cut">${{$product->price}}</span>
                                         <span class="new-price">${{$product->sale_price}}</span>

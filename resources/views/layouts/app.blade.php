@@ -9,99 +9,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" href="./assets/images/homepage-one/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!--title  -->
     <title>{{ config('app.name', 'Laravel') }}</title>
-<style>
-/* Apply to the section as a whole */
-#hero {
-    height: 100vh; /* Full height section */
-    position: relative;
-    overflow: hidden;
-}
+    <style>
+        /* Apply to the section as a whole */
+        #hero {
+            height: 100vh;
+            /* Full height section */
+            position: relative;
+            overflow: hidden;
+        }
 
-/* Styling for the swiper slides */
-.hero-slider-one {
-    height: 600%; /* Full height of section */
-    background-color: #000; /* Fallback color */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: flex-start; /* Align content horizontally */
-}
+        /* Styling for the swiper slides */
+        .hero-slider-one {
+            height: 600%;
+            /* Full height of section */
+            background-color: #000;
+            /* Fallback color */
+            display: flex;
+            align-items: center;
+            /* Center content vertically */
+            justify-content: flex-start;
+            /* Align content horizontally */
+        }
 
-/* Ensure text is visible */
-.wrapper-info {
-    z-index: 2; /* Keeps text above the background */
-}
+        /* Ensure text is visible */
+        .wrapper-info {
+            z-index: 2;
+            /* Keeps text above the background */
+        }
 
-.hero .wrapper-info h5,
-.hero .wrapper-info h1,
-.hero .wrapper-info a {
-    color: white; /* Ensures text is legible on background image */
-}
-<style>
-/* Common Wrapper Styles */
-.product-wrapper {
-    height: 400px; /* Adjust height as needed */
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    background-color: #000; /* Fallback color */
-    position: relative;
-    overflow: hidden;
-}
+        .hero .wrapper-info h5,
+        .hero .wrapper-info h1,
+        .hero .wrapper-info a {
+            color: white;
+            /* Ensures text is legible on background image */
+        }
 
-/* Overlay Styles */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-}
+        <style>
 
-/* Wrapper Info Styling */
-.wrapper-info {
-    z-index: 2; /* Content above overlay */
-    text-align: center;
-    padding: 20px;
-}
+        /* Common Wrapper Styles */
+        .product-wrapper {
+            height: 400px;
+            /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            /* Center content vertically */
+            justify-content: center;
+            /* Center content horizontally */
+            background-color: #000;
+            /* Fallback color */
+            position: relative;
+            overflow: hidden;
+        }
 
-.wrapper-info h4,
-.wrapper-info span,
-.wrapper-info a {
-    color: white; /* Ensures text is readable on the background */
-}
+        /* Overlay Styles */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+        }
 
-.shop-btn {
-    color: white;
-    border: 1px solid white;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: all 0.3s;
-}
+        /* Wrapper Info Styling */
+        .wrapper-info {
+            z-index: 2;
+            /* Content above overlay */
+            text-align: center;
+            padding: 20px;
+        }
 
-.shop-btn:hover {
-    background-color: white;
-}
+        .wrapper-info h4,
+        .wrapper-info span,
+        .wrapper-info a {
+            color: white;
+            /* Ensures text is readable on the background */
+        }
 
+        .shop-btn {
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
 
-</style>
- <!--------------- swiper-css ---------------->
-<link rel="stylesheet" href="{{ asset('css/swiper10-bundle.min.css') }}">
+        .shop-btn:hover {
+            background-color: white;
+        }
+    </style>
+    <!--------------- swiper-css ---------------->
+    <link rel="stylesheet" href="{{ asset('css/swiper10-bundle.min.css') }}">
 
-<!--------------- bootstrap-css ---------------->
-<link rel="stylesheet" href="{{ asset('css/bootstrap-5.3.2.min.css') }}">
+    <!--------------- bootstrap-css ---------------->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-5.3.2.min.css') }}">
 
-<!---------------------- Range Slider ------------------->
-<link rel="stylesheet" href="{{ asset('css/nouislider.min.css') }}">
+    <!---------------------- Range Slider ------------------->
+    <link rel="stylesheet" href="{{ asset('css/nouislider.min.css') }}">
 
-<!---------------------- Scroll ------------------->
-<link rel="stylesheet" href="{{ asset('css/aos-3.0.0.css') }}">
+    <!---------------------- Scroll ------------------->
+    <link rel="stylesheet" href="{{ asset('css/aos-3.0.0.css') }}">
 
-<!--------------- additional-css ---------------->
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!--------------- additional-css ---------------->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 
 
@@ -178,53 +192,81 @@
 
                             </div>
                         </div>
-                     
                         <div class="header-favourite">
-                            <a href="" class="cart-item">
-                                <span>
-                                    <svg width="35" height="27" viewBox="0 0 35 27" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M11.4047 8.54989C11.6187 8.30247 11.8069 8.07783 12.0027 7.86001C15.0697 4.45162 20.3879 5.51717 22.1581 9.60443C23.4189 12.5161 22.8485 15.213 20.9965 17.6962C19.6524 19.498 17.95 20.9437 16.2722 22.4108C15.0307 23.4964 13.774 24.5642 12.5246 25.6408C11.6986 26.3523 11.1108 26.3607 10.2924 25.6397C8.05177 23.6657 5.79225 21.7125 3.59029 19.6964C2.35865 18.5686 1.33266 17.2553 0.638823 15.7086C-0.626904 12.8872 0.0324709 9.41204 2.22306 7.41034C4.84011 5.01855 8.81757 5.36918 11.1059 8.19281C11.1968 8.30475 11.2907 8.41404 11.4047 8.54989Z"
-                                            fill="#6E6D79" />
-                                        <circle cx="26.7662" cy="8" r="8" fill="#AE1C9A" />
-                                        <path
-                                            d="M26.846 13.1392C26.1632 13.1392 25.5534 13.0215 25.0164 12.7862C24.4828 12.5509 24.0602 12.2244 23.7487 11.8068C23.4404 11.3859 23.2747 10.8987 23.2515 10.3452H24.8126C24.8325 10.6468 24.9336 10.9086 25.1159 11.1307C25.3015 11.3494 25.5434 11.5185 25.8417 11.6378C26.14 11.7571 26.4715 11.8168 26.836 11.8168C27.2371 11.8168 27.5917 11.7472 27.9 11.608C28.2115 11.4687 28.4551 11.2749 28.6308 11.0263C28.8065 10.7744 28.8943 10.4844 28.8943 10.1562C28.8943 9.81487 28.8065 9.51491 28.6308 9.25639C28.4584 8.99455 28.2049 8.78906 27.8701 8.63991C27.5387 8.49077 27.1377 8.41619 26.667 8.41619H25.8069V7.16335H26.667C27.0448 7.16335 27.3763 7.09541 27.6613 6.95952C27.9497 6.82363 28.1751 6.63471 28.3375 6.39276C28.4999 6.14749 28.5811 5.8608 28.5811 5.53267C28.5811 5.2178 28.5098 4.94437 28.3673 4.71236C28.2281 4.47704 28.0292 4.29309 27.7707 4.16051C27.5155 4.02794 27.2139 3.96165 26.8659 3.96165C26.5344 3.96165 26.2245 4.02296 25.9362 4.1456C25.6511 4.26491 25.4191 4.43726 25.2402 4.66264C25.0612 4.88471 24.9651 5.15151 24.9518 5.46307H23.4653C23.4819 4.91288 23.6443 4.42898 23.9525 4.01136C24.2641 3.59375 24.6751 3.26728 25.1855 3.03196C25.6959 2.79664 26.2627 2.67898 26.8858 2.67898C27.5387 2.67898 28.1021 2.80658 28.5761 3.06179C29.0534 3.31368 29.4213 3.65009 29.6798 4.07102C29.9416 4.49195 30.0709 4.95265 30.0676 5.45312C30.0709 6.0232 29.9118 6.5071 29.5903 6.90483C29.2721 7.30256 28.8479 7.56937 28.3176 7.70526V7.7848C28.9937 7.88755 29.5174 8.15601 29.8886 8.5902C30.2631 9.02438 30.4487 9.56297 30.4454 10.206C30.4487 10.7661 30.293 11.2682 29.9781 11.7124C29.6665 12.1565 29.2406 12.5062 28.7004 12.7614C28.1601 13.0133 27.542 13.1392 26.846 13.1392Z"
-                                            fill="#F9FFFB" />
-                                    </svg>
-                                </span>
-                                <span class="cart-text">
-                                    Wishlist
-                                </span>
-                            </a>
-                        </div>
-                        <div class="header-cart">
-                            <a href="{{route('cart.index')}}" class="cart-item">
-                                <span>
-                                    <svg width="35" height="28" viewBox="0 0 35 28" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.4444 21.897C14.8444 21.897 13.2441 21.8999 11.6441 21.8963C9.79233 21.892 8.65086 21.0273 8.12595 19.2489C7.04294 15.5794 5.95756 11.9107 4.87166 8.24203C4.6362 7.4468 4.37783 7.25412 3.55241 7.25175C2.7786 7.24964 2.00507 7.25754 1.23127 7.24911C0.512247 7.24148 0.0157813 6.79109 0.000242059 6.15064C-0.0160873 5.48281 0.475637 5.01689 1.23232 5.00873C2.11121 4.99952 2.99089 4.99214 3.86951 5.01268C5.36154 5.04769 6.52014 5.93215 6.96393 7.35415C7.14171 7.92378 7.34055 8.49026 7.46382 9.07201C7.54968 9.47713 7.77881 9.49661 8.10566 9.49582C11.8335 9.48897 15.5611 9.49134 19.2889 9.49134C21.0825 9.49134 22.8761 9.48108 24.6694 9.49503C26.0848 9.50608 27.0907 10.4906 27.0156 11.7778C27.0006 12.0363 26.925 12.2958 26.8473 12.5457C26.1317 14.8411 25.4124 17.1351 24.6879 19.4279C24.1851 21.0186 23.0223 21.8826 21.3504 21.8944C19.7151 21.906 18.0797 21.897 16.4444 21.897Z"
-                                            fill="#6E6D79" />
-                                        <path
-                                            d="M12.4012 27.5161C11.167 27.5227 10.1488 26.524 10.1345 25.2928C10.1201 24.0419 11.1528 22.9982 12.3967 23.0066C13.6209 23.0151 14.6422 24.0404 14.6436 25.2623C14.6451 26.4855 13.6261 27.5095 12.4012 27.5161Z"
-                                            fill="#6E6D79" />
-                                        <path
-                                            d="M22.509 25.2393C22.5193 26.4842 21.5393 27.4971 20.3064 27.5155C19.048 27.5342 18.0272 26.525 18.0277 25.2622C18.0279 24.0208 19.0214 23.0161 20.2572 23.0074C21.4877 22.9984 22.4988 24.0006 22.509 25.2393Z"
-                                            fill="#6E6D79" />
-                                        <circle cx="26.9523" cy="8" r="8" fill="#AE1C9A" />
-                                        <path
-                                            d="M23.7061 13V11.8864L27.1514 8.31676C27.5193 7.92898 27.8226 7.58925 28.0612 7.29759C28.3032 7.0026 28.4838 6.72254 28.6031 6.45739C28.7225 6.19223 28.7821 5.91051 28.7821 5.61222C28.7821 5.27415 28.7026 4.98248 28.5435 4.73722C28.3844 4.48864 28.1673 4.29806 27.8922 4.16548C27.6171 4.02959 27.3072 3.96165 26.9625 3.96165C26.5979 3.96165 26.2797 4.03622 26.008 4.18537C25.7362 4.33452 25.5274 4.54498 25.3815 4.81676C25.2357 5.08854 25.1628 5.40672 25.1628 5.77131H23.6962C23.6962 5.15151 23.8387 4.60961 24.1237 4.1456C24.4088 3.68158 24.7999 3.32197 25.297 3.06676C25.7942 2.80824 26.3593 2.67898 26.9923 2.67898C27.632 2.67898 28.1955 2.80658 28.6827 3.06179C29.1732 3.31368 29.556 3.65838 29.8311 4.09588C30.1062 4.53007 30.2438 5.0206 30.2438 5.56747C30.2438 5.94531 30.1725 6.31487 30.03 6.67614C29.8908 7.0374 29.6472 7.4401 29.2992 7.88423C28.9511 8.32505 28.4672 8.86032 27.8475 9.49006L25.824 11.608V11.6825H30.4078V13H23.7061Z"
-                                            fill="#F9FFFB" />
-                                    </svg>
+    <a href="{{route('user.wishlist.index')}}" class="cart-item text-decoration-none text-dark position-relative">
+        <!-- Icon container with position-relative -->
+        <span class="position-relative">
+            <!-- Heart Icon with grey color using Bootstrap text-muted -->
+            <i class="bi bi-heart-fill text-muted fs-2" style="font-size: 1.5rem;"></i>
+            
+            <!-- Wishlist Count Badge with Bootstrap badge classes for color -->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill "  style="background-color:rgb(141, 62, 102);">
+                {{ $wishlistCount ?? 0 }}  <!-- Replace with actual wishlist count -->
+                <span class="visually-hidden">wishlist items</span>
+            </span>
+        </span>
+        
+        <!-- Text -->
+        <span class="cart-text ms-2">Wishlist</span>
+    </a>
+</div>
 
-                                </span>
-                                <span class="cart-text">
-                                    Cart
-                                </span>
-                            </a>
-                            
+
+<div class="header-cart">
+    <a href="{{route('cart.index')}}" class="cart-item text-decoration-none text-dark position-relative">
+        <!-- Icon container with position-relative -->
+        <span class="position-relative">
+            <!-- Shopping Cart Icon (Trali Icon) -->
+            <i class="bi bi-cart-fill fs-2 text-muted" style="font-size: 1.5rem;"></i>
+            
+            <!-- Cart Count Badge -->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill  "  style="background-color:rgb(141, 62, 102);">
+                {{ $cartCount ?? 0 }}  <!-- Replace with actual cart count -->
+                <span class="visually-hidden">cart items</span>
+            </span>
+        </span>
+        
+        <!-- Cart Text -->
+        <span class="cart-text ms-2">Cart</span>
+    </a>
+    <div class="cart-submenu">
+        <div class="cart-wrapper-item">
+            <!-- Cart item details -->
+            <div class="wrapper">
+                <div class="wrapper-item">
+                    <div class="wrapper-img">
+                        <img src="assets/images/homepage-one/product-img/product-img-1.webp" alt="img">
+                    </div>
+                    <div class="wrapper-content">
+                        <h5 class="wrapper-title">Classic Design Skart</h5>
+                        <div class="price">
+                            <p class="new-price">$20.00</p>
                         </div>
+                    </div>
+                </div>
+                <!-- Close button -->
+                <span class="close-btn">
+                    <svg viewBox="0 0 10 10" fill="none" class="fill-current" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"></path>
+                    </svg>
+                </span>
+            </div>
+            <!-- More items... -->
+        </div>
+        <div class="cart-wrapper-section">
+            <div class="wrapper-line"></div>
+            <div class="wrapper-subtotal">
+                <h5 class="wrapper-title">Subtotal</h5>
+                <h5 class="wrapper-title">$60</h5>
+            </div>
+            <div class="cart-btn">
+                <a href="{{route('cart.index')}}" class="shop-btn view-btn">View Cart</a>
+                <a href="{{route('checkout.index')}}" class="shop-btn checkout-btn">Checkout Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
                         <div class="header-user">
                             <a href="user-profile.html">
                                 <span>
@@ -617,23 +659,10 @@
         <div class="header-bottom d-lg-block d-none">
             <div class="container">
                 <div class="header-nav">
-                    <div class="category-menu-section position-relative">
-                        <div class="empty position-fixed" onclick="tooglmenu()"></div>
-                        <button class="dropdown-btn" onclick="tooglmenu()">
-                            <span class="dropdown-icon">
-                                <svg width="14" height="9" viewBox="0 0 14 9" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="14" height="1" />
-                                    <rect y="8" width="14" height="1" />
-                                    <rect y="4" width="10" height="1" />
-                                </svg>
-                            </span>
-                            <span class="list-text">
-                                All Categories
-                            </span>
-                        </button>
-                     
-                    </div>
+               
+
+
+
                     <div class="header-nav-menu">
                         <ul class="menu-list">
                             <li>
@@ -690,19 +719,19 @@
     <!--------------- header-section-end --------------->
 
     <!--------------- hero-section --------------->
-   @yield('content')
+    @yield('content')
     <!--------------- hero-section-end --------------->
 
     <!--------------- style-section --------------->
-   
+
 
     <!--------------- category-section-end--------------->
 
     <!--------------- arrival-section-end--------------->
 
     <!--------------- flash-section--------------->
- 
-  
+
+
     <!--------------- flash-section-end--------------->
 
     <!--------------- footer-section--------------->
