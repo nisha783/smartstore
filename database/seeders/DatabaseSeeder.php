@@ -34,43 +34,7 @@ class DatabaseSeeder extends Seeder
         $user->is_active = true;
         $user->save();
  // Create some products
- Product::create([
-    'name' => 'Sample Product 1',
-    'slug' => Str::slug('Sample Product 1'),
-    'mini_description' => 'This is a sample product.',
-    'description' => 'Detailed description of Sample Product 1.',
-    'price' => 100.00,
-    'sale_price' => 80.00,
-    'sku' => 'SP-001',
-    'stock' => 10,
-    'featured' => true,
-    'status' => 'active',
-    'meta_title' => 'Sample Product 1',
-    'meta_description' => 'Sample Product 1 description.',
-    'weight' => 1.5,
-    'dimensions' => json_encode(['length' => 10, 'width' => 5, 'height' => 3]),
-    'is_default' => true,
-    'tax_class' => 'standard',
-]);
 
-Product::create([
-    'name' => 'Sample Product 2',
-    'slug' => str::slug('Sample Product 2'),
-    'mini_description' => 'This is another sample product.',
-    'description' => 'Detailed description of Sample Product 2.',
-    'price' => 150.00,
-    'sale_price' => 120.00,
-    'sku' => 'SP-002',
-    'stock' => 5,
-    'featured' => false,
-    'status' => 'active',
-    'meta_title' => 'Sample Product 2',
-    'meta_description' => 'Sample Product 2 description.',
-    'weight' => 2.0,
-    'dimensions' => json_encode(['length' => 15, 'width' => 10, 'height' => 5]),
-    'is_default' => false,
-    'tax_class' => 'premium',
-]);
 
         // Create categories
       //  $categories = \App\Models\Category::factory(10)->create();

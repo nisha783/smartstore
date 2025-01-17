@@ -65,13 +65,11 @@
             <div class="row gy-4 gx-5 gy-lg-0">
                 <!-- First Column -->
                 <div class="col-lg-6">
-                    <div class="product-wrapper wrapper-two" data-aos="fade-up" style="background-image: url('{{ asset('syle-bg-one.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="">
-                            <span class="wrapper-subtitle">Mega OFFER</span>
-                            <h4 class="wrapper-details">
-                                Make your New
-                                <span class="wrapper-inner-title">Styles with Our</span>
-                                Products
+                    <div class="product-wrapper wrapper-one" data-aos="fade-right" style="background-image: url('{{ asset('syle-bg-one.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <div class="wrapper-info">
+                            <span class="wrapper-subtitle text-dark">NEW STYLE</span>
+                            <h4 class="wrapper-details text-dark">Get 65% Offer
+                                <span class="wrapper-inner-title text-dark">& Make New</span> Fusion.
                             </h4>
                             <a href="product-sidebar.html" class="shop-btn">Shop Now
                                 <span>
@@ -91,11 +89,11 @@
                 <!-- Second Column -->
                 <div class="col-lg-6">
                     <div class="product-wrapper wrapper-two" data-aos="fade-up" style="background-image: url('{{ asset('style-bg-two.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-                        <div class="">
-                            <span class="wrapper-subtitle">Mega OFFER</span>
-                            <h4 class="wrapper-details">
+                        <div class="wrapper-info">
+                            <span class="wrapper-subtitle text-dark">Mega OFFER</span>
+                            <h4 class="wrapper-details text-dark">
                                 Make your New
-                                <span class="wrapper-inner-title">Styles with Our</span>
+                                <span class="wrapper-inner-title text-dark">Styles with Our</span>
                                 Products
                             </h4>
                             <a href="product-sidebar.html" class="shop-btn">Shop Now
