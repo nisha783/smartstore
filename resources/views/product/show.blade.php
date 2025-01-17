@@ -133,7 +133,7 @@
                                 <!-- change this -->
                             </div>
                         </div>
-                        @livewire('product-purchase', ['product' => $product])
+                            @livewire('product-purchase', ['product' => $product])
                         <div class="product-share">
                             <p>Share This:</p>
                             <div class="social-icons">
