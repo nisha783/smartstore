@@ -117,7 +117,7 @@
 
 
     <section class="product-category">
-        <div class="container">
+        <div class="container mb-5 mt-5">
             <div class="section-title">
                 <h5>Our Categories</h5>
                 <a href="{{route('category.index')}}" class="view">View All</a>
@@ -326,6 +326,7 @@
                                                 fill="#FFA800" />
                                         </svg>
                                     </span>
+            <span class="fs-3 text-muted">({{ $product->reviews()->count() }} Reviews)</span> 
                                 </div>
                                 <div class="product-description">
                                     <a href="{{ route('product.show', $product->slug) }}" class="product-details">{{ $product->slug }}</a>

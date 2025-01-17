@@ -1,8 +1,7 @@
-
-  <!--------------- blog-tittle-section---------------->
-  <div>
-      <section class="blog about-blog">
-          <div class="container">
+<!--------------- blog-tittle-section---------------->
+<div>
+    <section class="blog about-blog">
+        <div class="container">
             <div class="blog-bradcrum">
                 <span><a href="index.html">Home</a></span>
                 <span class="devider">/</span>
@@ -24,6 +23,9 @@
                         <table>
                             <tbody>
                                 <tr class="table-row table-top-row">
+                                <td class="table-wrapper wrapper-product">
+                                        <h5 class="table-heading">CLEAR</h5>
+                                    </td>
                                     <td class="table-wrapper wrapper-product">
                                         <h5 class="table-heading">PRODUCT</h5>
                                     </td>
@@ -37,104 +39,108 @@
                                             <h5 class="table-heading">QUANTITY</h5>
                                         </div>
                                     </td>
-                                    <td class="table-wrapper">
+                                    <td class="table-wrapper"> 
                                         <div class="table-wrapper-center">
                                             <h5 class="table-heading">Subtotal</h5>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="table-row ticket-row">
-                                @forelse ($cart->items as $item)
+                                    @forelse ($cart->items as $item)
                                     <tr wire:key="cart-item-{{ $item->id }}">
-                                    <td class="table-wrapper wrapper-product">
-                                        <div class="wrapper">
-                                            <div class="wrapper-img">
-                                            <a href="">
-                                                <img src="{{ Storage::url($item->product->images->first()->image) }}"
-                                                    alt="{{ $item->product->name }}" class="product-image" height="100px">
-                                            </a>
-                                            </div>
-                                            <div class="wrapper-content">
-                                            <h4 class="heading">{{ $item->product->name }}</h4>
-                                            </div>
-                                        </div>
-                                    </td>
                                     <td class="table-wrapper">
-                                        <div class="table-wrapper-center">
-                                            <h5 class="heading">{{ Number::currency($item->price) }}</h5>
-                                        </div>
-                                    </td>
-                                    <td class="table-wrapper">
-                                        <div class="table-wrapper-center">
-                                            <div class="quantity">
-                                                <span class="minus">
-                                                    -
-                                                </span>
-                                                <span class="number">1</span>
-                                                <span class="plus">
-                                                    +
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    
-                                    <td class="table-wrapper wrapper-total">
-                                        <div class="table-wrapper-center">
-                                            <h5 class="heading">{{ Number::currency($item->total) }}</h5>
-                                        </div>
-                                    </td>
-                                    <td class="table-wrapper">
-                                        <div class="table-wrapper-center">
-                                            <span>
-                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M9.7 0.3C9.3 -0.1 8.7 -0.1 8.3 0.3L5 3.6L1.7 0.3C1.3 -0.1 0.7 -0.1 0.3 0.3C-0.1 0.7 -0.1 1.3 0.3 1.7L3.6 5L0.3 8.3C-0.1 8.7 -0.1 9.3 0.3 9.7C0.7 10.1 1.3 10.1 1.7 9.7L5 6.4L8.3 9.7C8.7 10.1 9.3 10.1 9.7 9.7C10.1 9.3 10.1 8.7 9.7 8.3L6.4 5L9.7 1.7C10.1 1.3 10.1 0.7 9.7 0.3Z"
-                                                        fill="#AAAAAA"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="5" class="text-center py-4">
-                                            Your cart is empty.
-                                            <a href="{{ route('index') }}" class="btn btn-link">Continue Shopping</a>
-                                        </td>
-                                    </tr>
-                                @endforelse
+                                                <div class="table-wrapper-center">
+                                                    <button wire:click="removeItem({{ $item->product_id }})"
+                                                        wire:loading.attr="disabled" class="btn btn-close ms-3">
+                                                        <i class="fa-sharp fa-regular fa-xmark"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td class="table-wrapper wrapper-product">
+                                                <div class="wrapper">
+                                                    <div class="wrapper-img">
+                                                        <a href="">
+                                                            <img src="{{ Storage::url($item->product->images->first()->image) }}"
+                                                                alt="{{ $item->product->name }}" class="product-image m-4"
+                                                                height="50px">
+                                                        </a>
+                                                    </div>
+                
+                                                </div>
+                                            </td>
+                                            <td class="table-wrapper">
+                                                <div class="table-wrapper-center">
+                                                    <h5 class="heading fs-3">{{ Number::currency($item->price) }}</h5>
+                                                </div>
+                                            </td>
+                                            <td class="table-wrapper">
+                                                <div class="table-wrapper-center">
+                                                    <div class="quantity">
+                                                        <input type="number"
+                                            wire:model.live.debounce.500ms="quantities.{{ $item->product_id }}"
+                                            wire:change="updateQuantity({{ $item->product_id }}, $event.target.value)"
+                                            class="input-text qty text" min="1" max="{{ $item->product->stock }}"
+                                            step="1">
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td class="table-wrapper wrapper-total">
+                                                <div class="table-wrapper-center">
+                                                    <h5 class="heading fs-3">{{ Number::currency($item->total) }}</h5>
+                                                </div>
+                                            </td>
+                                           
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="5" class="text-center py-4">
+                                                Your cart is empty.
+                                                <a href="{{ route('index') }}" class="btn btn-link">Continue Shopping</a>
+                                            </td>
+                                        </tr>
+                                    @endforelse
                             </tbody>
                         </table>
+                        @if ($cart->items->isNotEmpty())
+                <div class="cart-actions mt-4">
+                    <button wire:click="clearCart" wire:loading.attr="disabled" class="btn btn-outline-danger fs-3">
+                        Clear Cart
+                    </button>
+                </div>
+            @endif
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="fs-2">Cart Totals</h5>
+                                <hr>
+                                <div class="wishlist-btn cart-btn d-flex justify-content-between align-items-center">
+                                    <h5 class="title fs-2">Subtotal</h5>
+                                    <p class="price">{{ Number::currency($subtotal) }}</p>
+                                </div>
+                                <hr>
+
+                                <div
+                                    class="checkout-total checkout-item d-flex justify-content-between align-items-center mt-2">
+                                    <h5 class="title fs-2 ">Total</h5>
+                                    <span>{{ Number::currency($total) }}</span>
+                                </div>
+
+                                @if ($cart->items->isNotEmpty())
+                                    <a href="{{ route('checkout.index') }}"
+                                        class="shop-btn btn btn-primary mt-3 w-100">Proceed to Checkout</a>
+                                @endif
+                            </div>
+                        </div>
 
                     </div>
-                    <div class="col-lg-4">
-                    <div class="card shadow-sm">
-    <div class="card-body">
-        <h5 class="fs-2">Cart Totals</h5>
-        <hr>
-        <div class="wishlist-btn cart-btn d-flex justify-content-between align-items-center">
-            <h5 class="title fs-2">Subtotal</h5>
-            <p class="price">{{ Number::currency($subtotal) }}</p>
-        </div>
-        <hr>
- 
-        <div class="checkout-total checkout-item d-flex justify-content-between align-items-center mt-2">
-            <h5 class="title fs-2 ">Total</h5>
-            <span>{{ Number::currency($total) }}</span>
-        </div>
 
-        @if ($cart->items->isNotEmpty())
-            <a href="{{ route('checkout.index') }}" class="shop-btn btn btn-primary mt-3 w-100">Proceed to Checkout</a>
-        @endif
-    </div>
-</div>
-
-</div>
-
-                </div>
                 </div>
             </div>
+        </div>
     </section>
 
 </div>

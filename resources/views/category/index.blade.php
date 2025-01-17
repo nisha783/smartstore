@@ -43,10 +43,6 @@
                                         <td>{{ $category->description }}</td>
                                         <!-- Created At -->
                                         <td>{{ $category->created_at ? $category->created_at->format('d-m-Y') : 'N/A' }}</td>
-                                        <!-- Action -->
-                                        <td>
-                                            <a href="" class="btn btn-warning btn-sm">Add to listing</a>
-                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
