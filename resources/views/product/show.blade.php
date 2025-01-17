@@ -117,7 +117,7 @@
                                         <div class="review-form-name address-form">
                                             <label for="reporttitle" class="form-label">Enter Report Ttile*</label>
                                             <input type="text" id="reporttitle" class="form-control"
-                                                placeholder="Reports Headline here">
+                                                pla ceholder="Reports Headline here">
                                         </div>
                                         <div class="review-form-name address-form">
                                             <label for="reportnote" class="form-label">Enter Report Note*</label>

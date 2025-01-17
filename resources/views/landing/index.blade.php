@@ -577,7 +577,4 @@
     </div>
 </section>
 <!--------------- best-sell-section-end--------------->
-
-
-
 @endsection
